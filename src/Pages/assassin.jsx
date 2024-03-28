@@ -40,7 +40,7 @@ function Login() {
 
     if (isLoggedIn) {
         return (
-            window.location.replace("/about")
+            window.location.replace("/panel")
         );
     }
 
