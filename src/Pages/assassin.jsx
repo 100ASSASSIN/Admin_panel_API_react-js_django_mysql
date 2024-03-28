@@ -40,10 +40,7 @@ function Login() {
 
     if (isLoggedIn) {
         return (
-            <div>
-                <h1>Welcome to Admin Panel!</h1>
-           
-            </div>
+            window.location.replace("/about")
         );
     }
 
@@ -66,5 +63,4 @@ function Login() {
         </div></div>
     );
 }
-
 export default Login;
