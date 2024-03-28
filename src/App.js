@@ -1,11 +1,13 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import NavBar from './Components/NavBar';
+//import NavBar from './Components/NavBar';
 const Home = lazy(() => import('./Pages/Home'));
 const About = lazy(() => import('./Pages/About'));
 const NoMatch = lazy(() => import('./Components/NoMatch'));
 const Assassin = lazy(() => import('./Pages/assassin'));
 const View = lazy(() => import('./view_panel/view_panel'));
+
+const NavBar = lazy(() => import ('./Components/NavBar'));
 
 const App = () => {
 	return (
