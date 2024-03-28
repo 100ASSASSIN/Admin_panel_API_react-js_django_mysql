@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Home = () => {
+const Home= () => {
 	return (
 		<div className="container">
 			<div className="banner-container">
