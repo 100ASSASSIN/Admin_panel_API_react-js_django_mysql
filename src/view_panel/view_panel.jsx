@@ -1,5 +1,5 @@
 import React  from "react";
-
+import '../Components/nav.css';
 
 const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
 
@@ -18,6 +18,7 @@ function View(){
             <h3>{g}</h3>
             <h3>{text}</h3>
             <h1>test</h1>
+            <div id="img"></div>
             <Add />
         </div>
     );
