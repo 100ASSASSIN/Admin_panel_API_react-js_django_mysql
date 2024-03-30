@@ -19,6 +19,7 @@ function View(){
             <h3>{text}</h3>
             <h1>test</h1>
             <div id="img"></div>
+            <Gamer />
             <Add />
         </div>
     );
@@ -28,4 +29,10 @@ const Add = () => {
         <h2>test22</h2>
     );
 }
+const Gamer = () => {
+    return(
+        <div style={{color : 'green'}}> sdsadad asdsadadtest sdsdsds dsadasdadas dsadadasdasd asdsadasdsadsad dasdsad a</div>
+    ); 
+}
+Gamer();
 export default View;
