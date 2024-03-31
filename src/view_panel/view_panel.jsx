@@ -21,7 +21,7 @@ class Application extends React.Component {
               <Helmet>
                   <meta charSet="utf-8" />
                   <title>My ASSASSIN</title>
-                  <link rel="canonical" href="http://mysite.com/example" />
+                  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"></link>
               </Helmet>
               ...
           </div>
