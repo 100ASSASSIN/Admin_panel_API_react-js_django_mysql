@@ -7,7 +7,7 @@ class Application extends React.Component {
               <Helmet>
                   <meta charSet="utf-8" />
                   <title>LOGIN PAGE</title>
-                  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"></link>
+                  <link rel="shortcut icon" href="https://cdn.oaistatic.com/_next/static/media/favicon-32x32.be48395e.png"/>
               </Helmet>
               ...
           </div>
