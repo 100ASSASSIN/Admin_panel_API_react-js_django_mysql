@@ -2,7 +2,6 @@ import React  from "react";
 import { Helmet } from "react-helmet";
 import '../Components/nav.css';
 import  { useState, useEffect } from 'react';
-import axios from 'axios';
 
 const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
 
@@ -17,36 +16,36 @@ let y = 20;
 let g = x + y;
 
 
-const DataViewer = () => {
-    const [data, setData] = useState([]);
+function ApiData() {
+  const [data, setData] = useState([]);
 
-    useEffect(() => {
-        fetchData();
-    }, []);
+  useEffect(() => {
+    // Fetch data from the API
+    fetch('http://localhost:8000/api/api/')
+      .then(response => response.json())
+      .then(data => {
+        // Extracting the message array from the API response
+        const messages = data[0].message;
+        setData(messages);
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
 
-    const fetchData = async () => {
-        try {
-            const response = await axios.get('http://localhost:8000/api/tab/');
-            setData(response.data);
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-    };
-
-    return (
-        <div>
-            <h1>Data Viewer</h1>
-            <ul>
-                {data.map((item, index) => (
-                    <li key={index}>{item.message}</li>
-                ))}
-            </ul>
-        </div>
-    );
-};
-
-
-
+  return (
+    <div>
+      <h1>API Data</h1>
+      <ul>
+        {data.map((item, index) => (
+          <li key={index}>
+            ID: {item[0]}, Name: {item[1]}, Password: {item[2]}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 class Application extends React.Component {
     render () {
@@ -73,7 +72,7 @@ function View(){
             <div style={{color:'red'}}><Add /></div>
             <Application />
             <Table />
-            <DataViewer />
+            <ApiData />
         </div>
     );
 }
