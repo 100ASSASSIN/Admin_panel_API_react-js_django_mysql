@@ -1,6 +1,8 @@
 import React  from "react";
 import { Helmet } from "react-helmet";
 import '../Components/nav.css';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
 
@@ -13,6 +15,38 @@ let x = 10;
 let y = 20;
 
 let g = x + y;
+
+
+const DataViewer = () => {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const fetchData = async () => {
+        try {
+            const response = await axios.get('http://localhost:8000/tab/');
+            setData(response.data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    return (
+        <div>
+            <h1>Data Viewer</h1>
+            <ul>
+                {data.map((item, index) => (
+                    <li key={index}>{item.message}</li>
+                ))}
+            </ul>
+        </div>
+    );
+};
+
+
+
 
 class Application extends React.Component {
     render () {
