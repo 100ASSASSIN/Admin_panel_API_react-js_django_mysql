@@ -19,7 +19,7 @@ const NavBar = () => {
 							<NavLink to="/assassin">Admin panel</NavLink>
 						</li>
 						<li>
-							<NavLink to="/about">About</NavLink>
+							<NavLink to="/about">Test api key</NavLink>
 						</li>
 					</ul>
 				</div>
