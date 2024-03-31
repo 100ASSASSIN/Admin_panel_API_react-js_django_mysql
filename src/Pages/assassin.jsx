@@ -1,4 +1,19 @@
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet";
+class Application extends React.Component {
+    render () {
+      return (
+          <div className="application">
+              <Helmet>
+                  <meta charSet="utf-8" />
+                  <title>LOGIN PAGE</title>
+                  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"></link>
+              </Helmet>
+              ...
+          </div>
+      );
+    }
+  };
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -46,6 +61,7 @@ function Login() {
 
     return (
         <div id='page'>
+            <Application />
         <div style={{ maxWidth: '400px', margin: '0 auto', padding: '50px', backgroundColor: '#f7f7f7', border: '1px solid #ccc', borderRadius: '5px' }}>
             <h2 style={{ color: 'black' }}>Login</h2>
             <form style={{ display: 'flex', flexDirection: 'column' }} onSubmit={handleSubmit}>
