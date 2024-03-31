@@ -1,4 +1,5 @@
 import React  from "react";
+import { Helmet } from "react-helmet";
 import '../Components/nav.css';
 
 const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
@@ -12,6 +13,21 @@ let x = 10;
 let y = 20;
 
 let g = x + y;
+
+class Application extends React.Component {
+    render () {
+      return (
+          <div className="application">
+              <Helmet>
+                  <meta charSet="utf-8" />
+                  <title>My ASSASSIN</title>
+                  <link rel="canonical" href="http://mysite.com/example" />
+              </Helmet>
+              ...
+          </div>
+      );
+    }
+  };
 function View(){
     return(
         <div id='panel'>
@@ -21,6 +37,7 @@ function View(){
             <div id="img"></div>
             <div style={{color:'bule'}}><Gamer /></div>
             <div style={{color:'red'}}><Add /></div>
+            <Application />
             <Table />
         </div>
     );
