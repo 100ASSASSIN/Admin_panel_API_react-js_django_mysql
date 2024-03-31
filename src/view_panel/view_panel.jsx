@@ -1,7 +1,7 @@
 import React  from "react";
 import { Helmet } from "react-helmet";
 import '../Components/nav.css';
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
@@ -26,7 +26,7 @@ const DataViewer = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/tab/');
+            const response = await axios.get('http://localhost:8000/api/tab/');
             setData(response.data);
         } catch (error) {
             console.error('Error fetching data:', error);
@@ -73,6 +73,7 @@ function View(){
             <div style={{color:'red'}}><Add /></div>
             <Application />
             <Table />
+            <DataViewer />
         </div>
     );
 }
