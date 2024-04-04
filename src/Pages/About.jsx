@@ -129,9 +129,6 @@ function ApiData() {
       <p>{message}</p>
       <ASSASSIN />
       <Check />
-      <App />
-      <Geolocation />
-      <New />
     </div>
   );
   }
