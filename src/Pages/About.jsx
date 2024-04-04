@@ -130,100 +130,10 @@ function ApiData() {
       <ASSASSIN />
       <Check />
       <App />
-      <Ip />
+      <Geolocation />
+      <New />
     </div>
   );
-}
-
-function Ip() {
-  const [ipAddress, setIpAddress] = useState("");
-  const [latitude, setLatitude] = useState(null);
-  const [longitude, setLongitude] = useState(null);
-  const [error, setError] = useState(null);
-  const [locationData, setLocationData] = useState([]);
-  const [autoSaveMessage, setAutoSaveMessage] = useState("");
-
-  // Fetch IP Address on mount
-  useEffect(() => {
-    fetch("https://api.ipecho.net/plain")
-      .then((response) => response.text())
-      .then((data) => {
-        console.log(`User's public IP address: ${data}`);
-        setIpAddress(data);
-      })
-      .catch((error) => console.error("Error fetching IP address:", error));
-  }, []);
-
-  // Fetch Live Location
-  useEffect(() => {
-    if (navigator.geolocation) {
-      const watchId = navigator.geolocation.watchPosition(
-        (position) => {
-          const newLocation = {
-            latitude: position.coords.latitude,
-            longitude: position.coords.longitude,
-          };
-          setLatitude(newLocation.latitude);
-          setLongitude(newLocation.longitude);
-          setError(null);
-
-          // Automatically save latitude and longitude to the locationData array
-          setLocationData((prevData) => {
-            const newData = [...prevData, newLocation];
-            downloadLocationData(newData); // Trigger download when new data is available
-            return newData;
-          });
-
-          // Show auto-save message
-          setAutoSaveMessage("Location data saved automatically.");
-
-          // Clear auto-save message after a certain time
-          setTimeout(() => {
-            setAutoSaveMessage("");
-          }, 3000); // Clear message after 3 seconds
-        },
-        (error) => {
-          setError(error.message);
-        }
-      );
-
-      return () => {
-        navigator.geolocation.clearWatch(watchId);
-      };
-    } else {
-      setError("Geolocation is not supported by this browser.");
-    }
-  }, []);
-
-  // Download Location Data
-  const downloadLocationData = (data) => {
-    const json = JSON.stringify(data);
-    const blob = new Blob([json], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "location_data.json";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  };
-
-  return (
-    <div className="App">
-      <h1>User's public IP address: {ipAddress}</h1>
-      {error ? (
-        <p>Error: {error}</p>
-      ) : (
-        <div>
-          <p>
-            Latitude: {latitude}, Longitude: {longitude}
-          </p>
-          <p>{autoSaveMessage}</p>
-          {/* <button onClick={downloadLocationData}>Download Location Data</button> */}
-        </div>
-      )}
-    </div>
-  );
-}
+  }
 
 export default About;
