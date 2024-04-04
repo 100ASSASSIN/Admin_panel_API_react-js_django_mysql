@@ -125,9 +125,36 @@ function ApiData() {
       <p>{message}</p>
       <ASSASSIN />
       <Check />
+      <App />
     </div>
   );
 }
+
+
+
+function App() {
+    const [ipAddress, setIpAddress] = useState("");
+
+    useEffect(() => {
+        fetch("https://api.ipecho.net/plain")
+            .then(response => response.text())
+            .then(data => {
+                console.log(`User's public IP address: ${data}`);
+                setIpAddress(data);
+            })
+            .catch(error => console.error("Error fetching IP address:", error));
+    }, []);
+
+    return (
+        <div className="App">
+            <h1>User's public IP address: {ipAddress}</h1>
+        </div>
+    );
+}
+
+
+
+
 
 
 
