@@ -126,6 +126,7 @@ function ApiData() {
       <ASSASSIN />
       <Check />
       <App />
+      <Geolocation />
     </div>
   );
 }
@@ -152,6 +153,84 @@ function App() {
     );
 }
 
+
+
+function LiveLocation() {
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);
+  const [error, setError] = useState(null);
+  const [locationData, setLocationData] = useState([]);
+
+  useEffect(() => {
+      if (navigator.geolocation) {
+          const watchId = navigator.geolocation.watchPosition(
+              position => {
+                  const newLocation = {
+                      latitude: position.coords.latitude,
+                      longitude: position.coords.longitude
+                  };
+                  setLatitude(newLocation.latitude);
+                  setLongitude(newLocation.longitude);
+                  setError(null);
+                  setLocationData(prevData => [...prevData, newLocation]);
+              },
+              error => {
+                  setError(error.message);
+              }
+          );
+
+          return () => navigator.geolocation.clearWatch(watchId);
+      } else {
+          setError('Geolocation is not supported by this browser.');
+      }
+  }, []);
+
+  const downloadLocationData = () => {
+      const json = JSON.stringify(locationData);
+      const blob = new Blob([json], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'location_data.json';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+  };
+
+  return (
+      <div>
+          {error ? (
+              <p>Error: {error}</p>
+          ) : (
+              <div>
+                  <p>
+                      Latitude: {latitude}, Longitude: {longitude}
+                  </p>
+                  <button onClick={downloadLocationData}>Download Location Data</button>
+              </div>
+          )}
+      </div>
+  );
+}
+
+function LiveLocation() {
+  return (
+      <div className="App">
+          <h1>Live Location</h1>
+          <LiveLocation />
+      </div>
+  );
+}
+
+
+function Geolocation() {
+    return (
+        <div className="App">
+            <h1>Live Location</h1>
+            <LiveLocation />
+        </div>
+    );
+}
 
 
 
