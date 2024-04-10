@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
 import { useCookies } from 'react-cookie';
 import '../Components/nav.css';
@@ -23,9 +23,9 @@ function View() {
       <div id="Dashborad"></div>
       <New />
       <button id='but' onClick={handleLogout} style={{ padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Logout</button>{/* Add logout button */}
-      <Link to="/Users"><div id="Users">List of users</div></Link>
-      <Link to="/Users"><div id="items">list of Items</div></Link>
-      <Link to="/Users"><div id="orders">Orders</div></Link>
+      <Link to="/Users"><div id="Users"><h2>List of users %</h2></div></Link>
+      <Link to="/Users"><div id="items"><h2>list of Items %</h2></div></Link>
+      <Link to="/Users"><div id="orders"><h2> Total Orders</h2></div></Link>
     </div>
   );
 }
