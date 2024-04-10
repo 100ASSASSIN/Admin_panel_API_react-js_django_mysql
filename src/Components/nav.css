@@ -11,68 +11,187 @@
     left: 1200px;
     top: 100px;
   }
-  
   #items,
-  #Users,
-  #orders,
-  #Profi {
-    position: absolute;
-    top: 90px;
-    border-radius: 2px;
-    padding: 20px;
-    width: 300px;
-    height: 150px;
-    transition: transform 0.3s ease-in-out; /* Add transition for smooth effect */
-  }
-  
-  #items {
-    left: 770px;
-    color: black;
-    background-color: yellow;
-  }
-  
-  #Users {
-    left: 50px;
-    color: white;
-    background-color: #007bff;
-    padding-left: 20px; /* Add padding-left specific to #Users */
-  }
-  
-  #orders {
-    left: 410px;
-    color: white;
-    background-color: greenyellow;
-  }
-  
-  #items:hover,
-  #Users:hover,
-  #orders:hover,
-  #Profi:hover {
-    transform: scale(1.1); /* Scale up on hover */
-  }
-  
-  #ut2 {
-    position: absolute;
-    left: 1200px;
-    top: 100px;
-  }
-  
-  .all {
-    background-color: gainsboro;
-    height: 10px;
-    width: 100px; /* Add unit (e.g., px) for width */
-  }
-  
-  #Profi {
-    color: white;
-    position: absolute;
-    top: 90px;
-    left: 1100px;
-    border-radius: 2px;
-    background-color: palegreen;
-    height: 150px;
-    width: 200px;
-    /* Remove duplicate position:absolute; property */
-    bottom: 200px; /* Positioning corrected to bottom */
-  }
-  
+#Users,
+#orders,
+#Profi {
+  position: absolute;
+  top: 90px;
+  border-radius: 2px;
+  padding: 20px;
+  width: 300px;
+  height: 150px;
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+#items {
+  left: 770px;
+  color: black;
+  background-color: yellow;
+}
+
+#Users {
+  left: 50px;
+  color: white;
+  background-color: #007bff;
+  padding-left: 20px; /* Add padding-left specific to #Users */
+}
+
+#orders {
+  left: 410px;
+  color: white;
+  background-color: greenyellow;
+}
+
+#items:hover,
+#Users:hover,
+#orders:hover,
+#Profi:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+#ut2 {
+  position: absolute;
+  left: 1200px;
+  top: 100px;
+}
+
+.all {
+  background-color: gainsboro;
+  height: 10px;
+  width: 100px; /* Add unit (e.g., px) for width */
+}
+
+#Profi {
+  color: white;
+  position: absolute;
+  top: 90px;
+  left: 1100px;
+  border-radius: 2px;
+  background-color: palegreen;
+  height: 150px;
+  width: 200px;
+  /* Remove duplicate position:absolute; property */
+  bottom: 200px; /* Positioning corrected to bottom */
+}
+
+/* Adding Font Awesome icons */
+#items::before {
+  content: "\f0ce"; /* Content for shopping cart icon */
+  font-family: FontAwesome;
+  font-size: 24px;
+  margin-right: 10px; /* Space between icon and text */
+}
+
+#Users::before {
+  content: "\f007"; /* Content for user icon */
+  font-family: FontAwesome;
+  font-size: 24px;
+  margin-right: 10px; /* Space between icon and text */
+}
+
+#orders::before {
+  content: "\f07a"; /* Content for list icon */
+  font-family: FontAwesome;
+  font-size: 24px;
+  margin-right: 10px; /* Space between icon and text */
+}
+
+#Profi::before {
+  content: "\f007"; /* Content for profile icon */
+  font-family: FontAwesome;
+  font-size: 24px;
+  margin-right: 10px; /* Space between icon and text */
+}
+#items,
+#Users,
+#orders,
+#Profi {
+  position: absolute;
+  top: 90px;
+  border-radius: 2px;
+  padding: 20px;
+  width: 300px;
+  height: 150px;
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+#items {
+  left: 770px;
+  color: black;
+  background-color: yellow;
+}
+
+#Users {
+  left: 50px;
+  color: white;
+  background-color: #007bff;
+  padding-left: 20px; /* Add padding-left specific to #Users */
+}
+
+#orders {
+  left: 410px;
+  color: white;
+  background-color: greenyellow;
+}
+
+#items:hover,
+#Users:hover,
+#orders:hover,
+#Profi:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+#ut2 {
+  position: absolute;
+  left: 1200px;
+  top: 100px;
+}
+
+.all {
+  background-color: gainsboro;
+  height: 10px;
+  width: 100px; /* Add unit (e.g., px) for width */
+}
+
+#Profi {
+  color: white;
+  position: absolute;
+  top: 90px;
+  left: 1100px;
+  border-radius: 2px;
+  background-color: palegreen;
+  height: 150px;
+  width: 200px;
+  /* Remove duplicate position:absolute; property */
+  bottom: 200px; /* Positioning corrected to bottom */
+}
+
+/* Adding Font Awesome icons */
+#items::before {
+  content: "\f07a"; /* Content for shopping cart icon */
+  font-family: FontAwesome;
+  font-size: 24px;
+  margin-right: 10px; /* Space between icon and text */
+}
+
+#Users::before {
+  content: "\f007"; /* Content for user icon */
+  font-family: FontAwesome;
+  font-size: 24px;
+  margin-right: 10px; /* Space between icon and text */
+}
+
+#orders::before {
+  content: "\f0f5"; /* Content for shopping bag icon */
+  font-family: FontAwesome;
+  font-size: 24px;
+  margin-right: 10px; /* Space between icon and text */
+}
+
+#Profi::before {
+  content: "\f007"; /* Content for profile icon */
+  font-family: FontAwesome;
+  font-size: 24px;
+  margin-right: 10px; /* Space between icon and text */
+}

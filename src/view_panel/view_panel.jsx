@@ -26,7 +26,7 @@ function View() {
       <Link to="/Users"><div id="Users"><div class="all"></div><h2>List of users %</h2></div></Link>
       <Link to="/Users"><div id="items"><div class="all"></div><h2>list of Items %</h2></div></Link>
       <Link to="/Users"><div id="orders"><div class="all"></div><h2> Total Orders</h2></div></Link>
-      <Link to="/Profi"><div id="Profi"><h2> Profile</h2></div></Link>
+      <Link to="/Profi"><div id="Profi"><h2><div id="icon"></div>Profile</h2></div></Link>
      
 </div>
   );
