@@ -58,11 +58,6 @@ function View() {
     </div>
   );
 }
-
-
-
-
-
 class  New extends React.Component {
   render() {
     return (
