@@ -72,7 +72,7 @@ const buttonStyle = {
 };
 
 
-const Users = () => {
+const Orders = () => {
     const [cookies] = useCookies(['user']);
 
     useEffect(() => {
@@ -89,12 +89,12 @@ const Users = () => {
     return (
         <div>
             <Helmet>
-                <title>Users</title>
+                <title>AD Orders</title>
             </Helmet>
-            <h1>Users Page</h1>
+            <h1>Orders</h1>
             <ApiData />
         </div>
     );
 }
 
-export default Users;
+export default Orders;

@@ -9,6 +9,7 @@ const View = lazy(() => import('./view_panel/view_panel'));
 const NavBar = lazy(() => import ('./Components/NavBar'));
 const Users = lazy(() => import ('./view_panel/user'));
 const Profi = lazy(() => import ('./view_panel/profi'));
+const Orders = lazy(() => import ('./view_panel/orders'));
 
 const App = () => {
 	return (
@@ -22,6 +23,7 @@ const App = () => {
 					<Route path="/panel" element={<View />} />
 					<Route path="/Users" element={<Users />} />
 					<Route path="/Profi" element={<Profi />} />
+					<Route path="/Orders" element={<Orders />} />
 					<Route path="*" element={<NoMatch />} />
 				</Routes>
 			</Suspense>
