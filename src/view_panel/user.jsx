@@ -21,23 +21,54 @@ function ApiData() {
                 console.error('Error fetching data:', error);
             });
     }, []);
-
     return (
         <div>
-         
-            <ul>
-                {data.map((item, index) => (
-                    <li key={index}>
-                        ID: {item[0]}, Name: {item[1]}, Password: {item[2]}
-                    </li>
-                ))}
-            </ul>
-            <button id="ut2" type="submit" style={{ padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }} onClick={() => navigate(-1)}>
-        Go Back
-      </button>
+            <table style={tableStyle}>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Password</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {data.map((item, index) => (
+                        <tr key={index}>
+                            <td style={cellStyle}>{item[0]}</td>
+                            <td style={cellStyle}>{item[1]}</td>
+                            <td style={cellStyle}>{item[2]}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+            <button id="ut2" type="submit" style={buttonStyle} onClick={() => navigate(-1)}>
+                Go Back
+            </button>
         </div>
     );
 }
+
+// Internal CSS styles
+const tableStyle = {
+    borderCollapse: 'collapse',
+    width: '100%',
+    border: '1px solid #ddd', // Adding border to the table
+};
+
+const cellStyle = {
+    border: '1px solid #ddd', // Adding border to table cells
+    padding: '8px', // Adding padding to table cells
+};
+
+const buttonStyle = {
+    padding: '10px 20px',
+    backgroundColor: '#007bff',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
+};
+
 
 const Users = () => {
     const [cookies] = useCookies(['user']);
