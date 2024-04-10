@@ -21,29 +21,31 @@ function View() {
     // Reload the page after deleting cookies
     window.location.replace("/")
   };
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/Numbers/")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
+ 
+   
+    const [joke, setJoke] = useState(null);
+    useEffect(() => {
+      fetch("http://localhost:8000/api/Numbers/", {
+        method: "GET",
+        headers: {
+          "X-RapidAPI-Key": "your-api-key",
+          "X-RapidAPI-Host": "jokes-by-api-ninjas.p.rapidapi.com",
+        },
       })
-      .then((data) => {
-        setMessage(data.message);
-      })
-      .catch((error) => {
-        console.error("There was a problem with the fetch operation:", error);
-      });
-  }, []);
+        .then((response) => response.json())
+        .then((data) => {
+          setJoke(data[0].joke);
+          console.log(data);
+        })
+        .catch((error) => console.log(error));
+    }, []);
+   
 
   return (
     <div id='panel'>
       <div id="Dashborad"></div>
       <New />
-      <Link to="/Users"><div id="Users"><div class="all"></div><h2>List of users {message}%</h2></div></Link>
+      <Link to="/Users"><div id="Users"><div class="all"></div><h2>List of users {joke && <p>{joke}</p>}%</h2></div></Link>
       <Link to="/Orders"><div id="orders"><div class="all"></div><h2> Total Orders</h2></div></Link>
       <Link to="/Users"><div id="items"><div class="all"></div><h2>list of Items %</h2></div></Link>
       <Link to="/Profi"><div id="Profi"><h2><div id="icon"></div>Profile</h2></div></Link>
