@@ -4,6 +4,9 @@ import { useCookies } from 'react-cookie';
 import '../Components/nav.css';
 import { Link } from 'react-router-dom';
 import'../view_panel/icons/icons.css'
+import { useState, useEffect } from 'react';
+
+
 
 function View() {
   const [cookies, setCookies, removeCookies] = useCookies(); // Add setCookies
@@ -18,13 +21,29 @@ function View() {
     // Reload the page after deleting cookies
     window.location.replace("/")
   };
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/api/Numbers/")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setMessage(data.message);
+      })
+      .catch((error) => {
+        console.error("There was a problem with the fetch operation:", error);
+      });
+  }, []);
 
   return (
     <div id='panel'>
       <div id="Dashborad"></div>
       <New />
-      
-      <Link to="/Users"><div id="Users"><div class="all"></div><h2>List of users %</h2></div></Link>
+      <Link to="/Users"><div id="Users"><div class="all"></div><h2>List of users {message}%</h2></div></Link>
       <Link to="/Orders"><div id="orders"><div class="all"></div><h2> Total Orders</h2></div></Link>
       <Link to="/Users"><div id="items"><div class="all"></div><h2>list of Items %</h2></div></Link>
       <Link to="/Profi"><div id="Profi"><h2><div id="icon"></div>Profile</h2></div></Link>
