@@ -28,7 +28,8 @@ function ApiData() {
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
-                        <th>Password</th>
+                        <th>mail</th>
+                        <th>contact</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,6 +38,7 @@ function ApiData() {
                             <td style={cellStyle}>{item[0]}</td>
                             <td style={cellStyle}>{item[1]}</td>
                             <td style={cellStyle}>{item[2]}</td>
+                            <td style={cellStyle}>{item[4]}</td>
                         </tr>
                     ))}
                 </tbody>
