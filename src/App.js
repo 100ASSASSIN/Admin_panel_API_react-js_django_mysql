@@ -8,6 +8,7 @@ const Assassin = lazy(() => import('./Pages/assassin'));
 const View = lazy(() => import('./view_panel/view_panel'));
 const NavBar = lazy(() => import ('./Components/NavBar'));
 const Users = lazy(() => import ('./view_panel/user'));
+const Profi = lazy(() => import ('./view_panel/profi'));
 
 const App = () => {
 	return (
@@ -20,6 +21,7 @@ const App = () => {
 					<Route path="/assassin" element={<Assassin />} />
 					<Route path="/panel" element={<View />} />
 					<Route path="/Users" element={<Users />} />
+					<Route path="/Profi" element={<Profi />} />
 					<Route path="*" element={<NoMatch />} />
 				</Routes>
 			</Suspense>
