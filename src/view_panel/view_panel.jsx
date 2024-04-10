@@ -54,7 +54,7 @@ function View() {
       <New />
       <ApiData />
       <button id='but' onClick={handleLogout} style={{ padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Logout</button>{/* Add logout button */}
-      <Link to="/Users">Go to home page</Link>
+      <Link to="/Users"><div id="Users"></div>List of users</Link>
     </div>
   );
 }
