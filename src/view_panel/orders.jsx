@@ -30,6 +30,13 @@ function ApiData() {
                         <th>user id</th>
                         <th>Item id</th>
                         <th>Status</th>
+                        <th>User name</th>
+                        <th>date</th>
+                        <th>Total price</th>
+                        <th>Item name</th>
+                        <th>Number</th>
+                        <th>Address</th>
+                        <th>Email</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,6 +46,13 @@ function ApiData() {
                             <td style={cellStyle}>{item[1]}</td>
                             <td style={cellStyle}>{item[2]}</td>
                             <td style={cellStyle}>{item[3]}</td>
+                            <td style={cellStyle}>{item[6]}</td>
+                            <td style={cellStyle}>{item[7]}</td>
+                            <td style={cellStyle}>{item[9]}</td>
+                            <td style={cellStyle}>{item[10]}</td>
+                            <td style={cellStyle}>{item[11]}</td>
+                            <td style={cellStyle}>{item[12]}</td>
+                            <td style={cellStyle}>{item[13]}</td>
                         </tr>
                     ))}
                 </tbody>
@@ -54,6 +68,7 @@ function ApiData() {
 const tableStyle = {
     borderCollapse: 'collapse',
     width: '100%',
+    padding: '20px',
     border: '1px solid #ddd', // Adding border to the table
 };
 
