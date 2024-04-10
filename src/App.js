@@ -6,7 +6,6 @@ const About = lazy(() => import('./Pages/About'));
 const NoMatch = lazy(() => import('./Components/NoMatch'));
 const Assassin = lazy(() => import('./Pages/assassin'));
 const View = lazy(() => import('./view_panel/view_panel'));
-
 const NavBar = lazy(() => import ('./Components/NavBar'));
 
 const App = () => {
