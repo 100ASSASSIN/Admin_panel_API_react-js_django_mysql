@@ -23,9 +23,9 @@ function View() {
       <div id="Dashborad"></div>
       <New />
       <button id='but' onClick={handleLogout} style={{ padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Logout</button>{/* Add logout button */}
-      <Link to="/Users"><div id="Users"><h2>List of users %</h2></div></Link>
-      <Link to="/Users"><div id="items"><h2>list of Items %</h2></div></Link>
-      <Link to="/Users"><div id="orders"><h2> Total Orders</h2></div></Link>
+      <Link to="/Users"><div id="Users"><div class="all"></div><h2>List of users %</h2></div></Link>
+      <Link to="/Users"><div id="items"><div class="all"></div><h2>list of Items %</h2></div></Link>
+      <Link to="/Users"><div id="orders"><div class="all"></div><h2> Total Orders</h2></div></Link>
     </div>
   );
 }
