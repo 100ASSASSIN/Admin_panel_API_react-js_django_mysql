@@ -6,3 +6,8 @@
     border-radius: 4px;
     box-shadow: 40px;
 }
+#but{
+    position: absolute;
+    left: 1200px;
+    top: 100px;
+}

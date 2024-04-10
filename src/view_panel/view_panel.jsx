@@ -71,7 +71,8 @@ function View() {
       <Application />
       <Table />
       <ApiData />
-      <button onClick={handleLogout}>Logout</button> {/* Add logout button */}
+      <button id='but' onClick={handleLogout} style={{ padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Logout</button>{/* Add logout button */}
+      
     </div>
   );
 }
