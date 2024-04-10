@@ -1,24 +1,13 @@
 import React, { useState } from 'react';
 import { Helmet } from "react-helmet";
-class Application extends React.Component {
-    render () {
-      return (
-          <div className="application">
-              <Helmet>
-                  <meta charSet="utf-8" />
-                  <title>LOGIN PAGE</title>
-                  <link rel="shortcut icon" href="https://cdn.oaistatic.com/_next/static/media/favicon-32x32.be48395e.png"/>
-              </Helmet>
-              ...
-          </div>
-      );
-    }
-  };
+import { useCookies } from 'react-cookie';
+
 function Login() {
+    const [cookies, setCookie] = useCookies(['user']);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(cookies.user ? true : false); // Check if user is already logged in from cookies
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -41,6 +30,7 @@ function Login() {
             // Handle response
             if (response.ok) {
                 // Login successful
+                setCookie('user', responseData.user, { path: '/' }); // Set user cookie
                 setIsLoggedIn(true); // Set login status to true
             } else {
                 // Login failed
@@ -61,22 +51,28 @@ function Login() {
 
     return (
         <div id='page'>
-            <Application />
-        <div style={{ maxWidth: '400px', margin: '0 auto', padding: '50px', backgroundColor: '#f7f7f7', border: '1px solid #ccc', borderRadius: '5px' }}>
-            <h2 style={{ color: 'black' }}>Login</h2>
-            <form style={{ display: 'flex', flexDirection: 'column' }} onSubmit={handleSubmit}>
-                <div style={{ marginBottom: '15px' }}>
-                    <label style={{ fontWeight: 'bold' }}>Username:</label>
-                    <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} style={{ width: '100%', padding: '8px', border: '1px solid #ccc', borderRadius: '4px' }} />
-                </div>
-                <div style={{ marginBottom: '15px' }}>
-                    <label style={{ fontWeight: 'bold' }}>Password:</label>
-                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} style={{ width: '100%', padding: '8px', border: '1px solid #ccc', borderRadius: '4px' }} />
-                </div>
-                {error && <p style={{ color: '#007bff' }}>{error}</p>}
-                <button type="submit" style={{ padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Login</button>
-            </form>
-        </div></div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>LOGIN PAGE</title>
+                <link rel="shortcut icon" href="https://cdn.oaistatic.com/_next/static/media/favicon-32x32.be48395e.png" />
+            </Helmet>
+            <div style={{ maxWidth: '400px', margin: '0 auto', padding: '50px', backgroundColor: '#f7f7f7', border: '1px solid #ccc', borderRadius: '5px' }}>
+                <h2 style={{ color: 'black' }}>Login</h2>
+                <form style={{ display: 'flex', flexDirection: 'column' }} onSubmit={handleSubmit}>
+                    <div style={{ marginBottom: '15px' }}>
+                        <label style={{ fontWeight: 'bold' }}>Username:</label>
+                        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} style={{ width: '100%', padding: '8px', border: '1px solid #ccc', borderRadius: '4px' }} />
+                    </div>
+                    <div style={{ marginBottom: '15px' }}>
+                        <label style={{ fontWeight: 'bold' }}>Password:</label>
+                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} style={{ width: '100%', padding: '8px', border: '1px solid #ccc', borderRadius: '4px' }} />
+                    </div>
+                    {error && <p style={{ color: '#007bff' }}>{error}</p>}
+                    <button type="submit" style={{ padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Login</button>
+                </form>
+            </div>
+        </div>
     );
 }
+
 export default Login;
