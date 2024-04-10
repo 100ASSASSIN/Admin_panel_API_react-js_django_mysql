@@ -157,8 +157,6 @@
 #Profi {
   color: white;
   text-align: center;
-  display: flex;
-  align-items: flex-end;
   height: 200px;
   position: absolute;
   top: 90px;
