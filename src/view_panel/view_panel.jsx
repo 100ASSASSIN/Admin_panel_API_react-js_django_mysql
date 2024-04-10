@@ -45,7 +45,7 @@ function View() {
     // Update cookies state to an empty object
     setCookies({});
     // Reload the page after deleting cookies
-    window.location.replace("/about")
+    window.location.replace("/")
   };
 
   return (
