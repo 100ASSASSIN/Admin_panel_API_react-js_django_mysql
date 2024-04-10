@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { useCookies } from 'react-cookie';
 import '../Components/nav.css';
-
+import { Link } from 'react-router-dom';
 function ApiData() {
   const [data, setData] = useState([]);
 
@@ -45,7 +45,7 @@ function View() {
     // Update cookies state to an empty object
     setCookies({});
     // Reload the page after deleting cookies
-    window.location.replace("/")
+    window.location.replace("/about")
   };
 
   return (
@@ -54,7 +54,7 @@ function View() {
       <New />
       <ApiData />
       <button id='but' onClick={handleLogout} style={{ padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Logout</button>{/* Add logout button */}
-      
+      <Link to="/Users">Go to home page</Link>
     </div>
   );
 }
