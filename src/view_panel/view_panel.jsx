@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { useCookies } from 'react-cookie';
 import '../Components/nav.css';
 import { Link } from 'react-router-dom';
+import'../view_panel/icons/icons.css'
 
 function View() {
   const [cookies, setCookies, removeCookies] = useCookies(); // Add setCookies
