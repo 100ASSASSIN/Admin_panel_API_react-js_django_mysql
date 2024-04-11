@@ -20,6 +20,12 @@ const Items = () => {
       }
     };
 
+    let text = "";
+    let i = 0;
+    while (i < 10) {
+      text += "<br>The number is " + i;
+      i++;
+    }
     fetchData();
   }, []); // Empty dependency array to run effect only once on mount
 
@@ -36,6 +42,7 @@ const Items = () => {
                 <p>Filename: {item.filename}</p>
                 <p>Uploaded At: {item.uploaded_at}</p>
                 <img id="fd" src={`data:image/jpeg;base64,${item.image}`} alt={item.filename} style={{ maxWidth: '40%', height: '50%', marginTop: '10px' }} />
+                <text />
               </div>
             </div>
           ))
