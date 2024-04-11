@@ -110,7 +110,7 @@ const Orders = () => {
             <Helmet>
                 <title>AD Orders</title>
             </Helmet>
-            <h1>Orders</h1>
+            <h1 style={{padding:'15px'}}>Orders</h1>
             <ApiData />
         </div>
     );
