@@ -210,3 +210,15 @@
 ::-webkit-scrollbar-thumb:hover {
   background-color: #555; /* Darker gray on hover */
 }
+
+#admin{
+  background-image: url('https://w.wallhaven.cc/full/5g/wallhaven-5g86w1.png');
+  width: 1150px;
+  border-radius: 20px;
+  height: 400px;
+  background-size: cover;
+  padding-top: 20px;
+}
+#p2{
+  color: #007bff;
+}
