@@ -10,6 +10,7 @@ const NavBar = lazy(() => import ('./Components/NavBar'));
 const Users = lazy(() => import ('./view_panel/user'));
 const Profi = lazy(() => import ('./view_panel/profi'));
 const Orders = lazy(() => import ('./view_panel/orders'));
+const Items_ls = lazy(() => import ('./view_panel/items_all'));
 
 const App = () => {
 	return (
@@ -24,6 +25,7 @@ const App = () => {
 					<Route path="/Users" element={<Users />} />
 					<Route path="/Profi" element={<Profi />} />
 					<Route path="/Orders" element={<Orders />} />
+					<Route path="/new" element={<Items_ls />} />
 					<Route path="*" element={<NoMatch />} />
 				</Routes>
 			</Suspense>

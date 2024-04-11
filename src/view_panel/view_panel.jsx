@@ -8,6 +8,7 @@ import YourComponent from "./users_count";
 import YourOrders from "./orders_count ";
 import Items from "./items";
 
+
 function View() {
   const [cookies, setCookies, removeCookies] = useCookies(); // Add setCookies
 
@@ -28,7 +29,7 @@ function View() {
       <New />
       <Link to="/Users"><div id="Users"><div class="all"></div><h2>List of users <YourComponent /></h2></div></Link>
       <Link to="/Orders"><div id="orders"><div class="all"></div><h2> Total Orders <YourOrders /></h2></div></Link>
-      <Link to="/Users"><div id="items"><div class="all"></div><h2>list of Items <Items /></h2></div></Link>
+      <Link to="/new"><div id="items"><div class="all"></div><h2>list of Items <Items /></h2></div></Link>
       <Link to="/Profi"><div id="Profi"><h2><div id="icon"></div>Profile</h2></div></Link>
      
 </div>
