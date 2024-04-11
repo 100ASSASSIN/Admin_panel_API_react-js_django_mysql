@@ -19,7 +19,7 @@
 #view{
   position: absolute;
   top: 260px;
-  padding: 50px;
+  padding: 20px;
   background-color: white;
   width: 660px;
   height: 570px;
@@ -39,11 +39,10 @@
 
 #view2{
   position: absolute;
-  top: 260px;
-  padding: 50px;
+  top: 280px;
   background-color: white;
   width: 560px;
-  height: 570px;
+  height: 400px;
   left: 770px;
   border-radius: 2px;
 }
