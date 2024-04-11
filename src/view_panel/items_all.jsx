@@ -25,36 +25,30 @@ const Items = () => {
 
   return (
     <div className="font-sans">
-      {apiData !== null ? (
-        <div>
-          {apiData.map((item) => (
-            <div className="font-sans overflow-y-scroll scrollbar-track-gray-200 scrollbar-thumb-gray-500 scrollbar-thumb-rounded hover:scrollbar-thumb-gray-800">
-            <div key={item.id} className="border border-gray-300 rounded-lg mb-4 p-4">
-              <div className="flex items-center justify-between">
-              <div className="flex">
+      <div className="flex flex-wrap">
+        {apiData !== null ? (
+          apiData.map((item) => (
+            <div key={item.id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 mb-4 px-2">
+              <div className="border border-gray-300 rounded-lg p-4">
                 <p className="font-semibold">ID: {item.id}</p>
                 <p>Name: {item.name}</p>
                 <p>Price: ${item.price}</p>
                 <p>Filename: {item.filename}</p>
                 <p>Uploaded At: {item.uploaded_at}</p>
-                <img id="fd" src={`data:image/jpeg;base64,${item.image}`} alt={item.filename} style={{ maxWidth: '50%', height: '50%', marginTop: '10px' }} />
+                <img id="fd" src={`data:image/jpeg;base64,${item.image}`} alt={item.filename} style={{ maxWidth: '40%', height: '50%', marginTop: '10px' }} />
               </div>
-              </div>
-              </div>
-              
-               <button id="ut2" type="submit" style={buttonStyle} onClick={() => navigate(-1)}>
-                Go Back
-            </button>
             </div>
-          ))}
-        </div>
-      ) : (
-        <p>Loading...</p>
-      )}
+          ))
+        ) : (
+          <p>Loading...</p>
+        )}
+      </div>
+      <button id="ut2" type="submit" style={buttonStyle} onClick={() => navigate(-1)}>
+        Go Back
+      </button>
     </div>
   );
-};
-
+}  
 
 const buttonStyle = {
     padding: '10px 20px',
