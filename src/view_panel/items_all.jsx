@@ -32,7 +32,7 @@ const Items = () => {
             <th>Price</th>
             <th>Filename</th>
             <th>Uploaded At</th>
-          
+            <th>IMG</th>
           </tr>
         </thead>
         <tbody>
