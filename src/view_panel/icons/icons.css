@@ -16,4 +16,23 @@
   .increased-width {
     width: 100%; /* You can adjust this value according to your needs */
   }
-  
+#view{
+  position: absolute;
+  top: 260px;
+  padding: 50px;
+  background-color: #EFEBD8;
+  width: 1280px;
+  height: 900px;
+  left: 50px;
+  border-radius: 2px;
+}
+#pop{
+  position: absolute;
+  top: 1200px;
+  padding: 50px;
+  background-color: #EFEBD8;
+  width: 1280px;
+  height: 300px;
+  left: 50px;
+  border-radius: 2px;
+}

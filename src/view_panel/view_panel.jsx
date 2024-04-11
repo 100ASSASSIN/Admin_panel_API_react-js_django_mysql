@@ -31,7 +31,9 @@ function View() {
       <Link to="/Orders"><div id="orders"><div class="all"></div><h2> Total Orders <YourOrders /></h2></div></Link>
       <Link to="/new"><div id="items"><div class="all"></div><h2>list of Items <Items /></h2></div></Link>
       <Link to="/Profi"><div id="Profi"><h2><div class="all"></div>Profile</h2></div></Link>
-     
+     <div id="view">test</div>
+     <div id="pop">test</div>
+
 </div>
   );
 }
