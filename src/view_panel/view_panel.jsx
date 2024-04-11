@@ -9,6 +9,7 @@ import YourOrders from "./orders_count ";
 import Items from "./items";
 import  { useState, useEffect } from "react";
 import ApiData from './user';
+import Maps from "../map/maps";
 
 function Check() {
   const [message, setMessage] = useState("");
@@ -73,9 +74,9 @@ function View() {
 
 </h4>
      </div>
-     <div id="view2"></div>
+     <div id="view2"><Maps/></div>
     
-     <div id="ttt"> </div>
+     <div id="ttt"></div>
      <div id="view3">
      
       <ApiData/></div>
