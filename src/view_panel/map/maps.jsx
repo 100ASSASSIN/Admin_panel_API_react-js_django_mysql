@@ -1,11 +1,12 @@
 import React from "react";
-import 'mapbox-gl/dist/mapbox-gl.css';
-import './map.css'
 
-const Maps = () => {
-    return(
-        <div id="map"></div>
-    );
-}
+const HTMLPageViewer = ({ url }) => {
+  return (
+    <div className="html-page-container">
+      <iframe src={url} title="HTML Page" width="100%" height="400px" />
+      
+    </div>
+  );
+};
 
-export default Maps;
+export default HTMLPageViewer;

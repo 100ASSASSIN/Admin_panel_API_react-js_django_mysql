@@ -6,7 +6,7 @@ const Home= () => {
 			<div className="banner-container">
 					<h2 style={{position:'absolute', top:'90px', paddingBottom:'40px'}}>ASSASSIN<br></br></h2>
 					<Link to="/assassin">
-						<div className="btn" style={{position:'absolute', top:'100px', left:'570px', top:'120px'}}>Enter admin panel</div>
+						<div className="btn" style={{position:'absolute',  left:'570px', top:'120px'}}>Enter admin panel</div>
 					</Link>
 				<div id='admin'></div>
 				<p><h2 id='p2'>functionalities you might have in your shopping admin panel:</h2>
@@ -25,8 +25,7 @@ const Home= () => {
 
 <h4>7. **Analytics and Reporting**: Offer insights into sales performance, revenue trends, popular products, customer demographics, and website traffic. Generate reports for analysis and decision-making.</h4>
 
-<h4>8. **User Permissions and Roles**: Implement role-based access control to restrict access to certain features or data based on user roles (e.g., admin, manager, staff).</h4>
-
+<h4>8. **User Permissions and Roles**: Implement role-based access control to restrict access to certain features or data based on user roles .</h4>
 <h4>9. **Content Management**: Allow admins to manage website content such as pages, blog posts, FAQs, and banners to keep the site updated and engaging.</h4>
 
 <h4>10. **Shipping and Tax Configuration**: Provide settings to configure shipping options, shipping rates, tax rates, and delivery zones to accurately calculate shipping costs for orders.</h4>
@@ -39,7 +38,7 @@ const Home= () => {
 
 <h4>14. **Email Notifications**: Set up automated email notifications for order confirmations, shipping updates, password resets, and other important events to keep customers informed.</h4>
 
-<h4></h4>15. **Customization and Extensibility**: Provide options for customization and integration with third-party tools or extensions to extend the functionality of the admin panel according to specific business needs.</h4></p>
+15. **Customization and Extensibility**: Provide options for customization and integration with third-party tools or extensions to extend the functionality of the admin panel according to specific business needs.</h4></p>
 			</div>
 		</div>
 	);

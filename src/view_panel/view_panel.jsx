@@ -9,7 +9,7 @@ import YourOrders from "./orders_count ";
 import Items from "./items";
 import  { useState, useEffect } from "react";
 import ApiData from './user';
-import Maps from "./map/maps";
+import HTMLPageViewer from './map/maps';
 
 function Check() {
   const [message, setMessage] = useState("");
@@ -74,7 +74,7 @@ function View() {
 
 </h4>
      </div>
-     <div id="view2"></div>
+     <div id="view2"><HTMLPageViewer url="https://www.google.com/search?q=google+map+in+react+js&sca_esv=f69dae79bff16cff&ei=BjcYZuvFKcbF4-EPzra9uAg&oq=js+go+map+react&gs_lp=Egxnd3Mtd2l6LXNlcnAiD2pzIGdvIG1hcCByZWFjdCoCCAAyCBAAGAgYBxgeMggQABgIGAcYHjIIEAAYCBgHGB4yCBAAGAgYBxgeMggQABgIGAcYHjIIEAAYCBgHGB4yCBAAGAgYBxgeMggQABgIGAcYHjIIEAAYCBgHGB4yCBAAGAgYBxgeSMUjUIMVWOUbcAJ4AZABAJgBf6AB5gKqAQMwLjO4AQHIAQD4AQGYAgWgAvgCwgIKEAAYRxjWBBiwA8ICChAAGIAEGIoFGEPCAgYQABgFGB7CAgYQABgIGB7CAggQABgIGB4YCsICBxAAGIAEGA2YAwCIBgGQBgiSBwMyLjOgB8Ia&sclient=gws-wiz-serp#ip=1" /></div>
      <div id="ttt"></div>
      <div id="view3">
       <ApiData/></div>
