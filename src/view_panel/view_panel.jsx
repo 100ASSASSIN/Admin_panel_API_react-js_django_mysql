@@ -74,7 +74,7 @@ function View() {
 
 </h4>
      </div>
-     <div id="view2"><Maps/></div>
+     <div id="view2"></div>
      <div id="ttt"></div>
      <div id="view3">
       <ApiData/></div>
