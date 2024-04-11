@@ -31,7 +31,7 @@ function Check() {
   return (
     <div className="assassin-container">
       <div id="msg">
-        <h5>{message}</h5>
+        <h4>{message}</h4>
       </div>
     </div>
   );
@@ -59,9 +59,7 @@ function View() {
       <Link to="/Orders"><div id="orders"><div class="all"></div><h2> Total Orders <YourOrders /></h2></div></Link>
       <Link to="/new"><div id="items"><div class="all"></div><h2>list of Items <Items /></h2></div></Link>
       <Link to="/Profi"><div id="Profi"><h2><div class="all"></div>Profile</h2></div></Link>
-     <div id="view"><h1>Key test</h1>
-
-     
+     <div id="view">
 
 <h4>1. **Product Management**: Allow admins to add, edit, and delete products. They can specify product details like name, description, price, quantity, images, categories, and tags.</h4>
 
@@ -82,17 +80,7 @@ function View() {
 <h4>9. **Content Management**: Allow admins to manage website content such as pages, blog posts, FAQs, and banners to keep the site updated and engaging.</h4>
 
 <h4>10. **Shipping and Tax Configuration**: Provide settings to configure shipping options, shipping rates, tax rates, and delivery zones to accurately calculate shipping costs for orders.</h4>
-
-<h4>11. **Payment Gateway Integration**: Integrate payment gateways to securely process online payments from customers. Admins can configure payment methods and view transaction history.</h4>
-
-<h4>12. **Security and Compliance**: Implement security measures like HTTPS, encryption, and user authentication to protect sensitive data. Ensure compliance with regulations such as GDPR or PCI DSS.</h4>
-
-<h4>13. **Localization and Multi-language Support**: Support multiple languages and currencies to cater to a global audience. Allow admins to manage translations and localize content.</h4>
-
-<h4>14. **Email Notifications**: Set up automated email notifications for order confirmations, shipping updates, password resets, and other important events to keep customers informed.</h4>
-
-<h4></h4>15. **Customization and Extensibility**: Provide options for customization and integration with third-party tools or extensions to extend the functionality of the admin panel according to specific business needs.</h4>
-     
+</h4>
      </div>
      <div id="pop"><Check /></div>
 
