@@ -13,7 +13,7 @@ function Check() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/check/")
+    fetch("http://127.0.0.1:8000/api/ASSASSIN/")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -30,9 +30,8 @@ function Check() {
 
   return (
     <div className="assassin-container">
-      <h1>Check</h1>
       <div id="msg">
-        <h3>{message}</h3>
+        <h5>{message}</h5>
       </div>
     </div>
   );
