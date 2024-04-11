@@ -212,7 +212,7 @@
 }
 
 #admin{
-  background-image: url('https://w.wallhaven.cc/full/5g/wallhaven-5g86w1.png');
+  background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/4506.jpg');
   width: 1150px;
   border-radius: 20px;
   height: 400px;
@@ -221,4 +221,22 @@
 }
 #p2{
   color: #007bff;
+}
+#tt{
+  color: #f1f1f1;
+  padding: 50px;
+  background-image: url('https://w.wallhaven.cc/full/dp/wallhaven-dpkmzl.png');
+  width: 100%;
+  border-radius: 2px;
+  height: 320px;
+  background-size: cover;
+}
+#ttt{
+  color: #f1f1f1;
+  padding: 50px;
+
+  width: 100%;
+  border-radius: 2px;
+  height: 760px;
+  background-size: cover;
 }

@@ -60,6 +60,7 @@ function View() {
       <Link to="/new"><div id="items"><div class="all"></div><h2>list of Items <Items /></h2></div></Link>
       <Link to="/Profi"><div id="Profi"><h2><div class="all"></div>Profile</h2></div></Link>
      <div id="view">
+     <Check />
 
 <h4>1. **Product Management**: Allow admins to add, edit, and delete products. They can specify product details like name, description, price, quantity, images, categories, and tags.</h4>
 
@@ -69,22 +70,14 @@ function View() {
 
 <h4>4. **Customer Management**: Allow admins to manage customer accounts, view customer details, track customer orders, and handle customer inquiries or support requests.
 
-<h4>5. **Category and Tag Management**: Provide tools to create, edit, and organize product categories and tags for easier navigation and filtering on the storefront.</h4>
-
-<h4>6. **Discounts and Promotions**: Enable admins to create and manage discount codes, coupons, promotional campaigns, and special offers to attract and retain customers.</h4>
-
-<h4>7. **Analytics and Reporting**: Offer insights into sales performance, revenue trends, popular products, customer demographics, and website traffic. Generate reports for analysis and decision-making.</h4>
-
-<h4>8. **User Permissions and Roles**: Implement role-based access control to restrict access to certain features or data based on user roles (e.g., admin, manager, staff).</h4>
-
-<h4>9. **Content Management**: Allow admins to manage website content such as pages, blog posts, FAQs, and banners to keep the site updated and engaging.</h4>
-
-<h4>10. **Shipping and Tax Configuration**: Provide settings to configure shipping options, shipping rates, tax rates, and delivery zones to accurately calculate shipping costs for orders.</h4>
 </h4>
      </div>
-     <div id="pop"><Check /></div>
-
+     <div id="view2"></div>
+    
+     <div id="ttt"> </div>
+     <div id="view3"></div>
 </div>
+
   );
 }
 class  New extends React.Component {

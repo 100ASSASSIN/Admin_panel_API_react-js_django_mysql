@@ -20,9 +20,9 @@
   position: absolute;
   top: 260px;
   padding: 50px;
-  background-color: #EFEBD8;
-  width: 1280px;
-  height: 900px;
+  background-color: white;
+  width: 660px;
+  height: 570px;
   left: 50px;
   border-radius: 2px;
 }
@@ -34,5 +34,28 @@
   width: 1280px;
   height: 300px;
   left: 50px;
+  border-radius: 2px;
+}
+
+#view2{
+  position: absolute;
+  top: 260px;
+  padding: 50px;
+  background-color: white;
+  width: 560px;
+  height: 570px;
+  left: 770px;
+  border-radius: 2px;
+}
+
+#view3{
+  position: absolute;
+  top: 840px;
+  padding: 50px;
+  background-color: white;
+  
+  width: 100%;
+  height: 570px;
+  background-size: cover;
   border-radius: 2px;
 }
