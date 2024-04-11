@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import './icons/tab.css'
 const Items = () => {
   const [apiData, setApiData] = useState(null);
 
@@ -26,8 +26,7 @@ const Items = () => {
             <div key={item.id} className="border border-gray-300 rounded-lg mb-4 p-4">
               <div className="flex items-center justify-between">
                 <p className="font-semibold">ID: {item.id}</p>
-                <img src={`data:image/jpeg;base64,${item.image}`} alt={item.filename} className="max-w-xs max-h-36 object-cover" />
-
+                <img src={`data:image/jpeg;base64,${item.image}`} alt={item.filename} style={{ maxWidth: '15%', height: '10%', marginTop: '10px' }} />
               </div>
               <div>
                 <p>Name: {item.name}</p>
