@@ -30,15 +30,17 @@ const Items = () => {
           {apiData.map((item) => (
             <div key={item.id} className="border border-gray-300 rounded-lg mb-4 p-4">
               <div className="flex items-center justify-between">
+              <div className="flex">
                 <p className="font-semibold">ID: {item.id}</p>
                 <p>Name: {item.name}</p>
                 <p>Price: ${item.price}</p>
                 <p>Filename: {item.filename}</p>
                 <p>Uploaded At: {item.uploaded_at}</p>
-                <img id="fd" src={`data:image/jpeg;base64,${item.image}`} alt={item.filename} style={{ maxWidth: '15%', height: '10%', marginTop: '10px' }} />
+                <img id="fd" src={`data:image/jpeg;base64,${item.image}`} alt={item.filename} style={{ maxWidth: '50%', height: '50%', marginTop: '10px' }} />
               </div>
-              <div>
               </div>
+             
+              
                <button id="ut2" type="submit" style={buttonStyle} onClick={() => navigate(-1)}>
                 Go Back
             </button>
