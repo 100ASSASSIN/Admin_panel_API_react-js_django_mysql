@@ -19,18 +19,22 @@ const Items = () => {
   }, []); // Empty dependency array to run effect only once on mount
 
   return (
-    <div style={{ fontFamily: 'Arial, sans-serif' }}>
+    <div className="font-sans">
       {apiData !== null ? (
         <div>
           {apiData.map((item) => (
-            <div key={item.id} style={{ border: '1px solid #ccc', borderRadius: '5px', marginBottom: '20px', padding: '10px' }}>
-              <p style={{ fontWeight: 'bold' }}>ID: {item.id}</p>
-              <p>Name: {item.name}</p>
-              <p>Price: ${item.price}</p>
-              <p>Filename: {item.filename}</p>
-              <p>Uploaded At: {item.uploaded_at}</p>
-              <img src={`data:image/jpeg;base64,${item.image}`} alt={item.filename} style={{ maxWidth: '10%', height: '10%', marginTop: '10px' }} />
-              {/* Assuming the image is in JPEG format */}
+            <div key={item.id} className="border border-gray-300 rounded-lg mb-4 p-4">
+              <div className="flex items-center justify-between">
+                <p className="font-semibold">ID: {item.id}</p>
+                <img src={`data:image/jpeg;base64,${item.image}`} alt={item.filename} className="max-w-xs max-h-36 object-cover" />
+
+              </div>
+              <div>
+                <p>Name: {item.name}</p>
+                <p>Price: ${item.price}</p>
+                <p>Filename: {item.filename}</p>
+                <p>Uploaded At: {item.uploaded_at}</p>
+              </div>
             </div>
           ))}
         </div>
