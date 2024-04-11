@@ -156,11 +156,9 @@
 
 #Profi {
   color: black;
-  text-align: center;
-  height: 200px;
   position: absolute;
   top: 90px;
-  left: 1100px;
+  left: 1130px;
   border-radius: 2px;
   background-color: palegreen;
   height: 150px;
