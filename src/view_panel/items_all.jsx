@@ -23,8 +23,8 @@ const Items = () => {
   }, []); // Empty dependency array to run effect only once on mount
 
   return (
-    <div className="font-sans">
-      <table className="table with-background">
+    <div id="newr">
+      <table className="table with-background increased-width">
         <thead>
           <tr>
             <th>ID</th>
@@ -50,7 +50,7 @@ const Items = () => {
                     alt={item.filename}
                     style={{
                       padding: '20px',
-                      maxWidth: "30%",
+                      maxWidth: "17%",
                       height: "20%",
                       marginTop: "5px",
                     }}

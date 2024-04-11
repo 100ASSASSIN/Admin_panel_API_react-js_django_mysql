@@ -1,6 +1,6 @@
 #tab{
     height: 200px;
-    height: 200px;
+    
 }
 #fd{
     border-radius: 2px;
@@ -39,4 +39,7 @@
     border-radius: 4px;
     cursor: pointer;
   }
-  
+#newr{
+  width: 2200px;
+  height: 200px;
+}

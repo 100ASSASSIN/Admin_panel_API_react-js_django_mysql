@@ -13,4 +13,7 @@
   ::-webkit-scrollbar-thumb:hover {
     background-color: #555; /* Darker gray on hover */
   }
+  .increased-width {
+    width: 100%; /* You can adjust this value according to your needs */
+  }
   
