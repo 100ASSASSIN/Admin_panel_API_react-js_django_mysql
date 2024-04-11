@@ -4,37 +4,10 @@ import { useCookies } from 'react-cookie';
 import '../Components/nav.css';
 import { Link } from 'react-router-dom';
 import'../view_panel/icons/icons.css'
-import { useState, useEffect } from 'react';
+import YourComponent from "./users_count";
+import YourOrders from "./orders_count ";
 
 
-const YourComponent = () => {
-  const [apiData, setApiData] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('http://localhost:8000/api/Numbers/');
-        const data = await response.json();
-        // Assuming your API response structure is as shown in your example
-        setApiData(data[0].message[0][0]);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, []); // Empty dependency array to run effect only once on mount
-
-  return (
-    <div>
-      {apiData !== null ? (
-        <p>% {apiData}</p>
-      ) : (
-        <p>Loading...</p>
-      )}
-    </div>
-  );
-};
 
 function View() {
   const [cookies, setCookies, removeCookies] = useCookies(); // Add setCookies
@@ -55,7 +28,7 @@ function View() {
       <div id="Dashborad"></div>
       <New />
       <Link to="/Users"><div id="Users"><div class="all"></div><h2>List of users <YourComponent /></h2></div></Link>
-      <Link to="/Orders"><div id="orders"><div class="all"></div><h2> Total Orders</h2></div></Link>
+      <Link to="/Orders"><div id="orders"><div class="all"></div><h2> Total Orders <YourOrders /></h2></div></Link>
       <Link to="/Users"><div id="items"><div class="all"></div><h2>list of Items %</h2></div></Link>
       <Link to="/Profi"><div id="Profi"><h2><div id="icon"></div>Profile</h2></div></Link>
      
