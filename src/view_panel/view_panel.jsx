@@ -74,7 +74,7 @@ function View() {
 
 </h4>
      </div>
-     <div id="view2"><iframe width="560px" height="400px" src="https://www.youtube.com/embed/DEA0_upu4sQ?si=JVpmF5jP0rLhxt_L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+     <div id="view2"><iframe width="560px" height="400px" src="https://www.youtube.com/embed/3RidOEgikAw?si=niuCyfhBt2gTfee0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
      <div id="ttt"></div>
      <div id="view3">
       <ApiData/></div>

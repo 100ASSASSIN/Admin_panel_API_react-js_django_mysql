@@ -8,7 +8,7 @@ const NavBar = () => {
 				<div className="nav-items container">
 					<div className="logo">
 						<a href="/">
-							<h1>ASSASSIN</h1>
+							<h1>ASSASSIN UNIVERSAL STUDIOS</h1>
 						</a>
 					</div>
 					<ul>
