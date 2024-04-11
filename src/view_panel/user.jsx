@@ -94,7 +94,7 @@ const Users = () => {
             <Helmet>
                 <title>Users</title>
             </Helmet>
-            <h1 style={{padding:'15px'}}>Users Page</h1>
+            <h1 style={{padding:'15px'}}>List of Users</h1>
             <ApiData />
         </div>
     );

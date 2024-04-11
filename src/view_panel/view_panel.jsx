@@ -8,6 +8,7 @@ import YourComponent from "./users_count";
 import YourOrders from "./orders_count ";
 import Items from "./items";
 import  { useState, useEffect } from "react";
+import ApiData from './user';
 
 function Check() {
   const [message, setMessage] = useState("");
@@ -75,7 +76,9 @@ function View() {
      <div id="view2"></div>
     
      <div id="ttt"> </div>
-     <div id="view3"></div>
+     <div id="view3">
+     
+      <ApiData/></div>
 </div>
 
   );
