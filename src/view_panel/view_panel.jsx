@@ -94,12 +94,11 @@ function View() {
   if (error) {
     return <p>Error: {error}</p>;
   }
-  const formattedData = JSON.stringify(data, null, 2);
+  
   return (
     <div id='panel'>
       <div id="Dashborad"></div>
       <New />
-      <DataFetchingExample />
       <Link to="/Users"><div id="Users"><div class="all"></div><h2>List of users {JSON.stringify(data, null, )} %</h2></div></Link>
       <Link to="/Orders"><div id="orders"><div class="all"></div><h2> Total Orders</h2></div></Link>
       <Link to="/Users"><div id="items"><div class="all"></div><h2>list of Items %</h2></div></Link>
