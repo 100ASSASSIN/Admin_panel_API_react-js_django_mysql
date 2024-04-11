@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
 import './icons/tab.css'
+
+const navigate = () => {
+    window.location.replace("/assassin");
+}
+
 const Items = () => {
   const [apiData, setApiData] = useState(null);
 
@@ -26,14 +31,17 @@ const Items = () => {
             <div key={item.id} className="border border-gray-300 rounded-lg mb-4 p-4">
               <div className="flex items-center justify-between">
                 <p className="font-semibold">ID: {item.id}</p>
-                <img src={`data:image/jpeg;base64,${item.image}`} alt={item.filename} style={{ maxWidth: '15%', height: '10%', marginTop: '10px' }} />
-              </div>
-              <div>
                 <p>Name: {item.name}</p>
                 <p>Price: ${item.price}</p>
                 <p>Filename: {item.filename}</p>
                 <p>Uploaded At: {item.uploaded_at}</p>
+                <img id="fd" src={`data:image/jpeg;base64,${item.image}`} alt={item.filename} style={{ maxWidth: '15%', height: '10%', marginTop: '10px' }} />
               </div>
+              <div>
+              </div>
+               <button id="ut2" type="submit" style={buttonStyle} onClick={() => navigate(-1)}>
+                Go Back
+            </button>
             </div>
           ))}
         </div>
@@ -43,5 +51,16 @@ const Items = () => {
     </div>
   );
 };
+
+
+const buttonStyle = {
+    padding: '10px 20px',
+    backgroundColor: '#007bff',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
+};
+
 
 export default Items;
