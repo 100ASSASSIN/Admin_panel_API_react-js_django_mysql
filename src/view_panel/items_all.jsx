@@ -29,7 +29,7 @@ const Items = () => {
               <p>Price: ${item.price}</p>
               <p>Filename: {item.filename}</p>
               <p>Uploaded At: {item.uploaded_at}</p>
-              <img src={`data:image/jpeg;base64,${item.image}`} alt={item.filename} style={{ maxWidth: '30%', height: '20%', marginTop: '10px' }} />
+              <img src={`data:image/jpeg;base64,${item.image}`} alt={item.filename} style={{ maxWidth: '10%', height: '10%', marginTop: '10px' }} />
               {/* Assuming the image is in JPEG format */}
             </div>
           ))}
