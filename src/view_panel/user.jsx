@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { useCookies } from 'react-cookie';
+import './icons/tab.css';import './icons/tab.css';
 const navigate = () => {
     window.location.replace("/assassin");
 }
@@ -23,6 +24,7 @@ function ApiData() {
     }, []);
     return (
         <div>
+            <div id='ord'>
             <table style={tableStyle}>
                 <thead>
                     <tr>
@@ -43,6 +45,7 @@ function ApiData() {
                     ))}
                 </tbody>
             </table>
+            </div>
             <button id="ut2" type="submit" style={buttonStyle} onClick={() => navigate(-1)}>
                 Go Back
             </button>

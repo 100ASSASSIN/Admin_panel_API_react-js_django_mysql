@@ -24,15 +24,15 @@ const Items = () => {
 
   return (
     <div id="newr">
-      <table className="table with-background increased-width">
+      <table className="table with-background" style={{ width: "100%" }}>
         <thead>
           <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Filename</th>
-            <th>Uploaded At</th>
-            <th>IMG</th>
+            <th style={{ width: "10%" }}>ID</th>
+            <th style={{ width: "20%" }}>Name</th>
+            <th style={{ width: "10%" }}>Price</th>
+            <th style={{ width: "20%" }}>Filename</th>
+            <th style={{ width: "20%" }}>Uploaded At</th>
+            <th style={{ width: "20%" }}>IMG</th>
           </tr>
         </thead>
         <tbody>
@@ -50,7 +50,7 @@ const Items = () => {
                     alt={item.filename}
                     style={{
                       padding: '20px',
-                      maxWidth: "17%",
+                      maxWidth: "70%",
                       height: "20%",
                       marginTop: "5px",
                     }}
@@ -70,6 +70,7 @@ const Items = () => {
         type="submit"
         className="button-with-background"
         onClick={() => navigate(-1)}
+        style={{ padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}
       >
         Go Back
       </button>

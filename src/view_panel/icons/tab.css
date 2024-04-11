@@ -40,6 +40,17 @@
     cursor: pointer;
   }
 #newr{
-  width: 2200px;
+  padding: 10px;
+  padding-top: 0px;
+  font-size: small;
+  width: 1200px;
   height: 200px;
+  border-radius: 2px;
+}
+#ord{
+  padding: 20px;
+  font-size: small;
+  width: 1350px;
+  height: 200px;
+  border-radius: 2px;
 }
