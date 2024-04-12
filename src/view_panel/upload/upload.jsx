@@ -65,31 +65,30 @@ function UploadPage() {
             };
         }
     };
+
     return (
         <div>
-              <button id="ut2" type="submit" style={buttonStyle1} onClick={() => navigate(-1)}>
-          Go Back
-          </button>
-        <div id="Uploade" style={{ maxWidth: '400px', margin: 'auto', padding: '20px', border: '1px solid #ccc', borderRadius: '5px' }}>
-            <form onSubmit={handleSubmit}>
-                <div style={{ marginBottom: '15px' }}>
-                    <label style={{ display: 'block', marginBottom: '5px' }}>Name:</label>
-                    <input type="text" value={name} onChange={handleNameChange} required style={{ width: '100%', padding: '8px', borderRadius: '3px', border: '1px solid #ccc' }} />
-                </div>
-                <div style={{ marginBottom: '15px' }}>
-                    <label style={{ display: 'block', marginBottom: '5px' }}>Price:</label>
-                    <input type="number" value={price} onChange={handlePriceChange} required style={{ width: '100%', padding: '8px', borderRadius: '3px', border: '1px solid #ccc' }} />
-                </div>
-                <div style={{ marginBottom: '15px' }}>
-                    <label style={{ display: 'block', marginBottom: '5px' }}>File:</label>
-                    <input type="file" onChange={handleFileChange} required style={{ width: '100%', padding: '8px', borderRadius: '3px', border: '1px solid #ccc' }} />
-                </div>
-                <button type="submit" style={{ width: '100%', padding: '10px', borderRadius: '3px', border: 'none', background: '#007bff', color: '#fff', cursor: 'pointer' }}>Upload</button>
-            </form>
+            <button id="ut2" type="submit" style={buttonStyle1} onClick={() => navigate(-1)}>
+                Go Back
+            </button>
+            <div id="Uploade" style={{ maxWidth: '400px', margin: 'auto', padding: '20px', border: '1px solid #ccc', borderRadius: '5px' }}>
+                <form onSubmit={handleSubmit}>
+                    <div style={{ marginBottom: '15px' }}>
+                        <label style={{ display: 'block', marginBottom: '5px' }}>Name:</label>
+                        <input type="text" value={name} onChange={handleNameChange} required style={inputStyle} />
+                    </div>
+                    <div style={{ marginBottom: '15px' }}>
+                        <label style={{ display: 'block', marginBottom: '5px' }}>Price:</label>
+                        <input type="number" value={price} onChange={handlePriceChange} required style={inputStyle} />
+                    </div>
+                    <div style={{ marginBottom: '15px' }}>
+                        <label style={{ display: 'block', marginBottom: '5px' }}>File:</label>
+                        <input type="file" onChange={handleFileChange} required style={inputStyle} />
+                    </div>
+                    <button type="submit" style={uploadButtonStyle}>Upload</button>
+                </form>
+            </div>
         </div>
-        
-        </div>
-        
     );
 }
 
@@ -99,6 +98,24 @@ const buttonStyle1 = {
     color: '#fff',
     border: 'none',
     borderRadius: '4px',
+    cursor: 'pointer',
+    marginBottom: '10px', // Add margin to separate from upload section
+};
+
+const inputStyle = {
+    width: '100%',
+    padding: '8px',
+    borderRadius: '3px',
+    border: '1px solid #ccc',
+};
+
+const uploadButtonStyle = {
+    width: '100%',
+    padding: '10px',
+    borderRadius: '3px',
+    border: 'none',
+    background: '#007bff',
+    color: '#fff',
     cursor: 'pointer',
 };
 

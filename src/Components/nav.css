@@ -283,5 +283,6 @@ h2{
   font-size: medium;
   height: auto;
   position: absolute;
+  top: 140px;
   left: 700px;
 }
