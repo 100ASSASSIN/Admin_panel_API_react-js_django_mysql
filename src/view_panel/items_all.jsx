@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./icons/tab.css";
-
+import './git/git.css';
+import "../Components/nav.css";
 const navigate = () => {
   window.location.replace("/assassin");
+};
+
+const Game = () => {
+  window.location.replace("/up");
 };
 
 const Items = () => {
@@ -24,7 +29,7 @@ const Items = () => {
 
   return (
     <div id="newr">
-      <table className="table with-background" style={{ width: "100%" }}>
+      <table className="table with-background" style={{ width: "90%" }}>
         <thead>
           <tr>
             <th style={{ width: "10%" }}>ID</th>
@@ -53,6 +58,7 @@ const Items = () => {
                       maxWidth: "70%",
                       height: "20%",
                       marginTop: "5px",
+                      borderRadius:"30px",
                     }}
                   />
                 </td>
@@ -69,11 +75,8 @@ const Items = () => {
         id="ut2"
         type="submit"
         className="button-with-background"
-        onClick={() => navigate(-1)}
-        style={{ padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}
-      >
-        Go Back
-      </button>
+        onClick={() => navigate(-1)} style={{ padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Go Back</button>
+        <div id="baritems"></div><button  onClick={() => Game(-1)} style={{ padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Add items</button>
       <div id='log' style={{color: '#007bff',paddingTop:'200px', paddingLeft:'250px'}}>© 2017-2024 Copyright ASSASSIN UNIVERSAL STUDIOS. Terms of Use · Privacy Policy .</div>
     </div>
     

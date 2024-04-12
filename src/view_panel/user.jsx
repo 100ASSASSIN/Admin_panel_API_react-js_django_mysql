@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { useCookies } from 'react-cookie';
-import './icons/tab.css';import './icons/tab.css';
+import './icons/tab.css';
+
 const navigate = () => {
     window.location.replace("/assassin");
 }

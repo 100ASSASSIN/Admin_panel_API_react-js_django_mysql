@@ -61,6 +61,7 @@ function UploadPage() {
         }
     };
     return (
+        <div>
         <div id="Uploade" style={{ maxWidth: '400px', margin: 'auto', padding: '20px', border: '1px solid #ccc', borderRadius: '5px' }}>
             <form onSubmit={handleSubmit}>
                 <div style={{ marginBottom: '15px' }}>
@@ -78,6 +79,9 @@ function UploadPage() {
                 <button type="submit" style={{ width: '100%', padding: '10px', borderRadius: '3px', border: 'none', background: '#007bff', color: '#fff', cursor: 'pointer' }}>Upload</button>
             </form>
         </div>
+        <div id='log' style={{color: '#007bff' }}>© 2017-2024 Copyright ASSASSIN UNIVERSAL STUDIOS. Terms of Use · Privacy Policy .</div>
+        </div>
+        
     );
 }
 
