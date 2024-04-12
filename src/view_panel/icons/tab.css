@@ -54,3 +54,14 @@
   height: 200px;
   border-radius: 2px;
 }
+#log{
+  color: #007bff;
+padding-right: 300px;
+width: 100%;
+}
+
+#loog{
+  position: absolute;
+  right: 450px;
+  width: 400px;
+}

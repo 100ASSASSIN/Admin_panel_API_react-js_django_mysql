@@ -40,6 +40,8 @@ const Home= () => {
 
 15. **Customization and Extensibility**: Provide options for customization and integration with third-party tools or extensions to extend the functionality of the admin panel according to specific business needs.</h4></p>
 			</div>
+			
+            <div id='log' style={{color: '#007bff'}}>© 2017-2024 Copyright ASSASSIN UNIVERSAL STUDIOS. Terms of Use · Privacy Policy .</div>
 		</div>
 	);
 };

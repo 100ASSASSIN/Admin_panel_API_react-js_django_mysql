@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from "react-helmet";
 import { useCookies } from 'react-cookie';
+import '../view_panel/icons/tab.css';
 
 function Login() {
     const [cookies, setCookie] = useCookies(['user']);
@@ -56,7 +57,7 @@ function Login() {
                 <title>LOGIN PAGE</title>
                 <link rel="shortcut icon" href="https://cdn.oaistatic.com/_next/static/media/favicon-32x32.be48395e.png" />
             </Helmet>
-            <div id='log' style={{ maxWidth: '400px', margin: '0 auto', padding: '50px', backgroundColor: '#f7f7f7', border: '1px solid #ccc', borderRadius: '5px' }}>
+            <div id='loog' style={{ maxWidth: '400px', margin: '0 auto', padding: '40px', backgroundColor: '#f7f7f7', border: '1px solid #ccc', borderRadius: '5px' }}>
                 <h3 style={{ color: 'black',  }}>Login</h3><br></br>
                 <form style={{ display: 'flex', flexDirection: 'column' }} onSubmit={handleSubmit}>
                     <div style={{ marginBottom: '15px' }}>
@@ -71,13 +72,8 @@ function Login() {
                     <button type="submit" style={{ padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Login</button>
                 </form>
             </div>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-Help © 2017-2024 Copyright Razorpay · Terms of Use · Privacy Policy ·
-
+            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+            <div id='log'>© 2017-2024 Copyright ASSASSIN UNIVERSAL STUDIOS. Terms of Use · Privacy Policy .</div>
         </div>
     );
 }

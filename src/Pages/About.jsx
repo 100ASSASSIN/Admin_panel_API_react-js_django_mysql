@@ -129,6 +129,7 @@ function ApiData() {
       <p>{message}</p>
       <ASSASSIN />
       <Check />
+      <div id='log' style={{color: '#007bff'}}>© 2017-2024 Copyright ASSASSIN UNIVERSAL STUDIOS. Terms of Use · Privacy Policy .</div>
     </div>
   );
   }

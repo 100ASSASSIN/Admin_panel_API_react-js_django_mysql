@@ -74,7 +74,9 @@ const Items = () => {
       >
         Go Back
       </button>
+      <div id='log' style={{color: '#007bff',paddingTop:'200px', paddingLeft:'250px'}}>© 2017-2024 Copyright ASSASSIN UNIVERSAL STUDIOS. Terms of Use · Privacy Policy .</div>
     </div>
+    
   );
 };
 

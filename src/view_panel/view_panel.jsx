@@ -56,7 +56,7 @@ function View() {
   return (
     <div id='panel'>
       <div id="Dashborad"></div>
-      <New />
+      <New/>
       <Link to="/Users"><div id="Users"><div class="all"></div><h2>List of users <YourComponent /></h2></div></Link>
       <Link to="/Orders"><div id="orders"><div class="all"></div><h2> Total Orders <YourOrders /></h2></div></Link>
       <Link to="/new"><div id="items"><div class="all"></div><h2>list of Items <Items /></h2></div></Link>
@@ -95,6 +95,7 @@ class  New extends React.Component {
           <title>My ASSASSIN</title>
           <link rel="shortcut icon" href="https://cdn.oaistatic.com/_next/static/media/favicon-32x32.be48395e.png" />
         </Helmet>
+        
       </div>
     );
   }
