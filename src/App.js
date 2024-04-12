@@ -11,6 +11,7 @@ const Users = lazy(() => import ('./view_panel/user'));
 const Profi = lazy(() => import ('./view_panel/profi'));
 const Orders = lazy(() => import ('./view_panel/orders'));
 const Items_ls = lazy(() => import ('./view_panel/items_all'));
+const UploadPage = lazy(() => import ('./view_panel/upload/upload'));
 
 const App = () => {
 	return (
@@ -26,6 +27,7 @@ const App = () => {
 					<Route path="/Profi" element={<Profi />} />
 					<Route path="/Orders" element={<Orders />} />
 					<Route path="/new" element={<Items_ls />} />
+					<Route path="/up" element={<UploadPage />} />
 					<Route path="*" element={<NoMatch />} />
 				</Routes>
 			</Suspense>
