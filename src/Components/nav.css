@@ -269,7 +269,7 @@ h2{
   position: absolute;
   background-color: #E4686E;
   color: #ffff;
-  left: 9 00px;
+  left: 800px;
   bottom: 230px;
 }
 #but2{
@@ -277,4 +277,11 @@ h2{
   display: block;
   position: absolute;
   bottom: 20px;
+}
+#in{
+  width: 500px;
+  font-size: medium;
+  height: auto;
+  position: absolute;
+  left: 700px;
 }

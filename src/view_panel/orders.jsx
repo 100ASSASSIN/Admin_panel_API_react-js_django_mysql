@@ -72,7 +72,6 @@ const tableStyle = {
     borderCollapse: 'collapse',
     width: '100%',
     padding: '5px',
-
     border: '1px solid #ddd', // Adding border to the table
 };
 
