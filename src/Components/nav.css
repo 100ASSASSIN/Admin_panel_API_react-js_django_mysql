@@ -250,6 +250,18 @@ h2{
   position: absolute;
   top: 30px;
 }
-
-
+#pro{
+  position: absolute;
+  bottom: 200px;
+  left: 40px;
+  border-radius: 10px;
+  background-image: url("https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  width: 600px;
+  height: 320px;
+}
 /* Styling for the content inside the marquee */
+#pro2{
+  position: absolute;
+  bottom: 9px;
+}
