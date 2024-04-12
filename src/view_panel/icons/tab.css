@@ -66,5 +66,7 @@ width: 100%;
   width: 400px;
 }
 #Uploade{
-  
+  position: absolute;
+  bottom: 200px;
+  left: 500px;
 }
