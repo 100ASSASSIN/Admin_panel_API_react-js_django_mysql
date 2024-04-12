@@ -267,14 +267,13 @@ h2{
 }
 #name{
   position: absolute;
-  width: 400px;
-  height: 320px;
   background-color: #E4686E;
   color: #ffff;
-  left: 700px;
-  bottom: 200px;
+  left: 9 00px;
+  bottom: 230px;
 }
 #but2{
+
   display: block;
   position: absolute;
   bottom: 20px;
