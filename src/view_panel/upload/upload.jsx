@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import '../icons/tab.css';
+
+const navigate = () => {
+    window.location.replace("/new");
+}
+
 function UploadPage() {
     const [file, setFile] = useState(null);
     const [name, setName] = useState('');
@@ -62,6 +67,9 @@ function UploadPage() {
     };
     return (
         <div>
+              <button id="ut2" type="submit" style={buttonStyle1} onClick={() => navigate(-1)}>
+          Go Back
+          </button>
         <div id="Uploade" style={{ maxWidth: '400px', margin: 'auto', padding: '20px', border: '1px solid #ccc', borderRadius: '5px' }}>
             <form onSubmit={handleSubmit}>
                 <div style={{ marginBottom: '15px' }}>
@@ -79,10 +87,19 @@ function UploadPage() {
                 <button type="submit" style={{ width: '100%', padding: '10px', borderRadius: '3px', border: 'none', background: '#007bff', color: '#fff', cursor: 'pointer' }}>Upload</button>
             </form>
         </div>
-        <div id='log' style={{color: '#007bff' }}>© 2017-2024 Copyright ASSASSIN UNIVERSAL STUDIOS. Terms of Use · Privacy Policy .</div>
+        
         </div>
         
     );
 }
+
+const buttonStyle1 = {
+    padding: '10px 20px',
+    backgroundColor: '#007bff',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
+};
 
 export default UploadPage;

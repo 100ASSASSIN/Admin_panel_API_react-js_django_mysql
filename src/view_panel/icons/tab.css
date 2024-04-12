@@ -55,7 +55,7 @@
   border-radius: 2px;
 }
 #log{
-  color: #007bff;
+color: #007bff;
 padding-right: 300px;
 width: 100%;
 }
@@ -67,6 +67,11 @@ width: 100%;
 }
 #Uploade{
   position: absolute;
-  bottom: 200px;
+  bottom: 150px;
   left: 500px;
 }
+#bar22{
+  color: #007bff;
+  padding-right: 300px;
+  width: 100%;
+  }
