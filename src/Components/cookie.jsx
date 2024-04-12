@@ -1,9 +1,9 @@
 import React  from "react";
 
-const Api = () => {
+const Cokkie = () => {
     return(
-<div> new</div>
+        <div>new</div>
     );
 }
 
-export default Api;
+export default Cokkie;
