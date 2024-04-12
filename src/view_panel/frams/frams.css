@@ -1,0 +1,22 @@
+#baritems{
+    padding-top: 90px;
+    padding-left: 500px;
+}
+.loading-spinner {
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #007bff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    display: block;
+    position: absolute;
+    top: 90px;
+    left: 600px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
