@@ -9,7 +9,6 @@ import YourOrders from "./orders_count ";
 import Items from "./items";
 import  { useState, useEffect } from "react";
 import ApiData from './user';
-import { FaBeer, FaFolder } from "react-icons/fa";
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 function Check() {
