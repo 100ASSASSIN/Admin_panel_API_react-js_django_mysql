@@ -151,7 +151,7 @@
 }
 
 .all {
-  background-color: gainsboro;
+  background-color: white;
   height: 10px;
   position: absolute;
   top: 20px;
@@ -250,3 +250,6 @@ h2{
   position: absolute;
   top: 30px;
 }
+
+
+/* Styling for the content inside the marquee */

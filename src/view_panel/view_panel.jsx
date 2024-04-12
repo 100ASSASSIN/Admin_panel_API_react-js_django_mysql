@@ -9,7 +9,8 @@ import YourOrders from "./orders_count ";
 import Items from "./items";
 import  { useState, useEffect } from "react";
 import ApiData from './user';
-
+import { FaBeer, FaFolder } from "react-icons/fa";
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 function Check() {
   const [message, setMessage] = useState("");
@@ -61,8 +62,10 @@ function View() {
       <Link to="/Orders"><div id="orders"><div class="all"></div><h2> Total Orders <YourOrders /></h2></div></Link>
       <Link to="/new"><div id="items"><div class="all"></div><h2>list of Items <Items /></h2></div></Link>
       <Link to="/Profi"><div id="Profi"><h3><div class="all"></div><div id ="texts">Profile</div></h3></div></Link>
-     <div id="view">
+     <div id="view"> 
+     <marquee>
      <h3 style={{color:'green'}}><Check /></h3>
+</marquee>
 
 <h4>1. **Product Management**: Allow admins to add, edit, and delete products. They can specify product details like name, description, price, quantity, images, categories, and tags.</h4>
 
@@ -71,7 +74,9 @@ function View() {
 <h4>3. **Order Management**: Enable admins to view and manage orders, including order status updates, order cancellation, and order history. They can also generate invoices and packing slips.</h4>
 
 <h4>4. **Customer Management**: Allow admins to manage customer accounts, view customer details, track customer orders, and handle customer inquiries or support requests.
+<h4>5. **Category and Tag Management**: Provide tools to create, edit, and organize product categories and tags for easier navigation and filtering on the storefront.</h4>
 
+<h4>6. **Discounts and Promotions**: Enable admins to create and manage discount codes, coupons, promotional campaigns, and special offers to attract and retain customers.</h4>
 </h4>
      </div>
      <div id="view2"><iframe width="560px" height="400px" src="https://www.youtube.com/embed/3RidOEgikAw?si=niuCyfhBt2gTfee0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
