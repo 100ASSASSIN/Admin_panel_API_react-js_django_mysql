@@ -57,7 +57,7 @@ function Login() {
                 <link rel="shortcut icon" href="https://cdn.oaistatic.com/_next/static/media/favicon-32x32.be48395e.png" />
             </Helmet>
             <div style={{ maxWidth: '400px', margin: '0 auto', padding: '50px', backgroundColor: '#f7f7f7', border: '1px solid #ccc', borderRadius: '5px' }}>
-                <h2 style={{ color: 'black' }}>Login</h2>
+                <h3 style={{ color: 'black',  }}>Login</h3><br></br>
                 <form style={{ display: 'flex', flexDirection: 'column' }} onSubmit={handleSubmit}>
                     <div style={{ marginBottom: '15px' }}>
                         <label style={{ fontWeight: 'bold' }}>Username:</label>
@@ -71,6 +71,7 @@ function Login() {
                     <button type="submit" style={{ padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Login</button>
                 </form>
             </div>
+            text
         </div>
     );
 }

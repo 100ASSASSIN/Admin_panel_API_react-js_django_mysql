@@ -9,7 +9,7 @@ const Home= () => {
 						<div className="btn" style={{position:'absolute',  left:'570px', top:'120px'}}>Enter admin panel</div>
 					</Link>
 				<div id='admin'></div>
-				<p><h2 id='p2'>functionalities you might have in your shopping admin panel:</h2>
+				<p><h3 id='p2'>functionalities you might have in your shopping admin panel:</h3>
 
 <h4>1. **Product Management**: Allow admins to add, edit, and delete products. They can specify product details like name, description, price, quantity, images, categories, and tags.</h4>
 

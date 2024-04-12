@@ -57,6 +57,8 @@
 }
 
 .all {
+  position: absolute;
+  top: 40px;
   background-color: gainsboro;
   height: 10px;
   width: 100px; /* Add unit (e.g., px) for width */
@@ -108,7 +110,7 @@
 #orders,
 #Profi {
   position: absolute;
-  top: 90px;
+  top: 100px;
   border-radius: 2px;
   padding: 20px;
   width: 300px;
@@ -151,20 +153,20 @@
 .all {
   background-color: gainsboro;
   height: 10px;
+  position: absolute;
+  top: 20px;
   width: 100px; /* Add unit (e.g., px) for width */
 }
 
 #Profi {
-  color: black;
+  color: white;
   position: absolute;
-  top: 90px;
+  top: 100px;
   left: 1130px;
   border-radius: 2px;
   background-color: palegreen;
   height: 150px;
-  width: 200px;
-  /* Remove duplicate position:absolute; property */
-  bottom: 200px; /* Positioning corrected to bottom */
+  width: 200px; /* Positioning corrected to bottom */
 }
 
 /* Adding Font Awesome icons */
@@ -239,4 +241,12 @@
   border-radius: 2px;
   height: 760px;
   background-size: cover;
+}
+h2{
+  position: absolute;
+  top: 40px;
+}
+#texts{
+  position: absolute;
+  top: 30px;
 }
