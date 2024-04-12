@@ -62,22 +62,22 @@ function UploadPage() {
     };
 
     return (
-        <div>
-            <h2>Upload Product</h2>
+        <div style={{ maxWidth: '400px', margin: 'auto', padding: '20px', border: '1px solid #ccc', borderRadius: '5px' }}>
+            <h2 style={{ textAlign: 'center' }}>Upload Product</h2>
             <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Name:</label>
-                    <input type="text" value={name} onChange={handleNameChange} required />
+                <div style={{ marginBottom: '15px' }}>
+                    <label style={{ display: 'block', marginBottom: '5px' }}>Name:</label>
+                    <input type="text" value={name} onChange={handleNameChange} required style={{ width: '100%', padding: '8px', borderRadius: '3px', border: '1px solid #ccc' }} />
                 </div>
-                <div>
-                    <label>Price:</label>
-                    <input type="number" value={price} onChange={handlePriceChange} required />
+                <div style={{ marginBottom: '15px' }}>
+                    <label style={{ display: 'block', marginBottom: '5px' }}>Price:</label>
+                    <input type="number" value={price} onChange={handlePriceChange} required style={{ width: '100%', padding: '8px', borderRadius: '3px', border: '1px solid #ccc' }} />
                 </div>
-                <div>
-                    <label>File:</label>
-                    <input type="file" onChange={handleFileChange} required />
+                <div style={{ marginBottom: '15px' }}>
+                    <label style={{ display: 'block', marginBottom: '5px' }}>File:</label>
+                    <input type="file" onChange={handleFileChange} required style={{ width: '100%', padding: '8px', borderRadius: '3px', border: '1px solid #ccc' }} />
                 </div>
-                <button type="submit">Upload</button>
+                <button type="submit" style={{ width: '100%', padding: '10px', borderRadius: '3px', border: 'none', background: '#007bff', color: '#fff', cursor: 'pointer' }}>Upload</button>
             </form>
         </div>
     );
