@@ -18,9 +18,7 @@ function Profi() {
     return (<div>
           <button id='but' onClick={handleLogout} style={{ padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Logout</button>{/* Add logout button */}
          <div>
-          <div id="pro">
-
-          </div>
+          <div id="pro"></div> <div id="name">test</div>
          <div id='pro2' style={{color: '#007bff',paddingTop:'300px', paddingLeft:'250px'}}>© 2017-2024 Copyright ASSASSIN UNIVERSAL STUDIOS. Terms of Use · Privacy Policy .</div>
          </div>
     </div>

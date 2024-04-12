@@ -265,3 +265,12 @@ h2{
   position: absolute;
   bottom: 9px;
 }
+#name{
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  background-color: #E4686E;
+  color: #ffff;
+  left: 700px;
+  bottom: 300px;
+}
