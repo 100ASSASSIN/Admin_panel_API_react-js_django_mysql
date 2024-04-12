@@ -72,21 +72,44 @@ function UploadPage() {
                 Go Back
             </button>
             <div id="Uploade" style={{ maxWidth: '400px', margin: 'auto', padding: '20px', border: '1px solid #ccc', borderRadius: '5px' }}>
-                <form onSubmit={handleSubmit}>
-                    <div style={{ marginBottom: '15px' }}>
-                        <label style={{ display: 'block', marginBottom: '5px' }}>Name:</label>
-                        <input type="text" value={name} onChange={handleNameChange} required style={inputStyle} />
-                    </div>
-                    <div style={{ marginBottom: '15px' }}>
-                        <label style={{ display: 'block', marginBottom: '5px' }}>Price:</label>
-                        <input type="number" value={price} onChange={handlePriceChange} required style={inputStyle} />
-                    </div>
-                    <div style={{ marginBottom: '15px' }}>
-                        <label style={{ display: 'block', marginBottom: '5px' }}>File:</label>
-                        <input type="file" onChange={handleFileChange} required style={inputStyle} />
-                    </div>
-                    <button type="submit" style={uploadButtonStyle}>Upload</button>
-                </form>
+            <form onSubmit={handleSubmit} className="upload-form">
+    <div className="form-group">
+        <label htmlFor="nameInput" className="form-label">Name:</label>
+        <input
+            type="text"
+            id="nameInput"
+            value={name}
+            onChange={handleNameChange}
+            required
+            className="form-control"
+        />
+    </div>
+    <div className="form-group">
+        <label htmlFor="priceInput" className="form-label">Price:</label>
+        <input
+            type="number"
+            id="priceInput"
+            value={price}
+            onChange={handlePriceChange}
+            required
+            className="form-control"
+        />
+    </div>
+    <div className="form-group">
+    <label htmlFor="fileInput" className="file-label">
+    <span className="button-text">Choose File</span>
+    <input
+        type="file"
+        id="fileInput"
+        onChange={handleFileChange}
+        required
+        className="file-input"
+    />
+</label>
+    </div>
+    <button type="submit" className="upload-button">Upload</button>
+</form>
+
             </div>
         </div>
     );

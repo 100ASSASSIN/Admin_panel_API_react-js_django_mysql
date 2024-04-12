@@ -65,10 +65,78 @@ width: 100%;
 #Uploade{
   position: absolute;
   bottom: 150px;
-  left: 500px;
+  left: 450px;
+  width: 500PX;
 }
 #bar22{
   color: #007bff;
   padding-right: 300px;
   width: 100%;
   }
+  .upload-form {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.upload-button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+.file-label {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+ 
+}
+
+.file-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.button-text {
+  font-size: x-small;
+  display: inline-block;
+  padding: 10px 10px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Optional hover effect */
+.button-text:hover {
+  background-color: #0056b3; /* Darker shade of blue */
+}
