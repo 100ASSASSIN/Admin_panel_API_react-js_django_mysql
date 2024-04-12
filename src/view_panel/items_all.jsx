@@ -69,6 +69,7 @@ const Items = () => {
               <td colSpan="6">Loading...</td>
             </tr>
           )}
+           <div id="baritems"><button  onClick={() => Game(-1)} style={{ padding: '10px 90px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Add items</button></div>
         </tbody>
       </table>
       <button
@@ -76,7 +77,7 @@ const Items = () => {
         type="submit"
         className="button-with-background"
         onClick={() => navigate(-1)} style={{ padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Go Back</button>
-        <div id="baritems"></div><button  onClick={() => Game(-1)} style={{ padding: '10px 20px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Add items</button>
+       
       <div id='log' style={{color: '#007bff',paddingTop:'200px', paddingLeft:'250px'}}>© 2017-2024 Copyright ASSASSIN UNIVERSAL STUDIOS. Terms of Use · Privacy Policy .</div>
     </div>
     
