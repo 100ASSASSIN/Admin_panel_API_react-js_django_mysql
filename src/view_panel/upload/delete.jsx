@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import '../upload/del.css'; // Import CSS file for styling
+import '../icons/tab.css';
+const navigate = () => {
+    window.location.replace("/new");
+}
 
 function DeleteItem() {
   const [itemId, setItemId] = useState('');
@@ -23,18 +28,37 @@ function DeleteItem() {
   };
 
   return (
-    <div>
-      <h2>Delete Item</h2>
-      <input
-        type="number"
-        placeholder="Enter item ID"
-        value={itemId}
-        onChange={e => setItemId(e.target.value)}
-      />
-      <button onClick={handleDelete}>Delete</button>
-      {message && <p>{message}</p>}
+    
+    <div id="del2">
+    <div className="delete-item-container">
+     
+      <div className="input-container">
+        <input
+          type="number"
+          placeholder="Enter item ID"
+          value={itemId}
+          onChange={e => setItemId(e.target.value)}
+        />
+        <button onClick={handleDelete} className="delete-button">Delete</button>
+      </div>
+      {message && <p className="message">{message}</p>}
+      <p className="warning">Please ensure the correctness of the item ID before deleting. This action cannot be undone.</p>
+    </div>
+    <div id='back'>
+    <button type="submit" style={buttonStyle} onClick={() => navigate(-1)}>
+                Go Back
+            </button></div>
     </div>
   );
 }
+
+const buttonStyle = {
+    padding: '10px 30px',
+    backgroundColor: '#007bff',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
+};
 
 export default DeleteItem;

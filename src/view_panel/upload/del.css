@@ -1,0 +1,55 @@
+.delete-item-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+  }
+  
+  .delete-button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #f44336; /* Red color for delete button */
+    color: white;
+    cursor: pointer;
+  }
+  
+  .message {
+    margin-top: 10px;
+    color: #f44336; /* Red color for error message */
+  }
+  
+  .warning {
+    margin-top: 20px;
+    color: #f44336; /* Red color for warning message */
+  }
+ #del2{
+    position: absolute;
+    top: 200px;
+    left: 450px;
+ }
+#back{
+    position: absolute;
+    bottom: 250px;
+    left: 790px;
+    width: 200px;
+}
