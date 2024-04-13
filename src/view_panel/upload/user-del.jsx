@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../upload/del.css'; // Import CSS file for styling
 import '../icons/tab.css';
 const navigate = () => {
-    window.location.replace("/new");
+    window.location.replace("/Users");
 }
 
 
