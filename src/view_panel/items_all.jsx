@@ -11,6 +11,10 @@ const Game = () => {
   window.location.replace("/up");
 };
 
+const remove = () => {
+  window.location.replace("/del");
+};
+
 const Items = () => {
   const [apiData, setApiData] = useState(null);
   const [loading, setLoading] = useState(true); // Add loading state
@@ -73,7 +77,7 @@ const Items = () => {
           </tbody>
         </table>
       )}
-      <div id="baritems"><button onClick={() => Game(-1)} style={{ padding: '10px 90px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>+ Add items</button></div>
+      <div id="baritems"><button onClick={() => Game(-1)} style={{ padding: '10px 90px', backgroundColor: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>+ Add items</button> <button onClick={() => remove(-1)} style={{ padding: '10px 90px', backgroundColor: 'red', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>- Remove items</button></div>
       <button
         id="ut2"
         type="submit"

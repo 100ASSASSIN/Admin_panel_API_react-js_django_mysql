@@ -1,7 +1,9 @@
 #baritems{
     padding-top: 90px;
-    padding-left: 500px;
+    padding-left: 300px;
+    margin: 5px 15px;
 }
+.button {padding: 10px 24px;}
 .loading-spinner {
     border: 5px solid rgba(0, 0, 0, 0.1);
     border-left-color: #007bff;
