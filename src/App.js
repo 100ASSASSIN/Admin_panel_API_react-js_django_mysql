@@ -14,6 +14,8 @@ const Items_ls = lazy(() => import ('./view_panel/items_all'));
 const UploadPage = lazy(() => import ('./view_panel/upload/upload'));
 const DeleteItem = lazy(() => import ('./view_panel/upload/delete'));
 const Bot = lazy(() => import ('./Components/cookie'));
+const Deleteord = lazy(() => import ('./view_panel/upload/orders-del'));
+const Deleteu = lazy(() => import ('./view_panel/upload/user-del'));
 const App = () => {
 	return (
 		<>
@@ -29,6 +31,8 @@ const App = () => {
 					<Route path="/Orders" element={<Orders />} />
 					<Route path="/new" element={<Items_ls />} />
 					<Route path="/del" element={<DeleteItem />} />
+					<Route path="/ord_del" element={<Deleteord />} />
+					<Route path="/users_del" element={<Deleteu />} />
 					<Route path="/cot" element={<Bot />} />
 					<Route path="/up" element={<UploadPage />} />
 					<Route path="*" element={<NoMatch />} />
