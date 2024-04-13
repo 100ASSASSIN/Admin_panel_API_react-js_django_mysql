@@ -5,6 +5,7 @@ const navigate = () => {
     window.location.replace("/new");
 }
 
+
 function Deleteu() {
   const [itemId, setItemId] = useState('');
   const [message, setMessage] = useState('');
@@ -48,6 +49,7 @@ function Deleteu() {
     <button type="submit" style={buttonStyle} onClick={() => navigate(-1)}>
                 Go Back
             </button></div>
+           
     </div>
   );
 }

@@ -48,6 +48,7 @@ function Deleteord() {
     <button type="submit" style={buttonStyle} onClick={() => navigate(-1)}>
                 Go Back
             </button></div>
+            
     </div>
   );
 }

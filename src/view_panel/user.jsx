@@ -6,7 +6,9 @@ import './icons/tab.css';
 const navigate = () => {
     window.location.replace("/assassin");
 }
-
+const remove = () => {
+    window.location.replace("/del");
+  };
 function ApiData() {
     const [data, setData] = useState([]);
 
@@ -97,6 +99,7 @@ const Users = () => {
             </Helmet>
             <h1 style={{padding:'15px'}}>List of Users</h1>
             <ApiData />
+            <button onClick={() => remove(-1)} style={{ padding: '10px 90px', backgroundColor: 'red', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>- Remove users</button>
             <div id='log' style={{color: '#007bff',paddingTop:'200px', paddingLeft:'250px'}}>© 2017-2024 Copyright ASSASSIN UNIVERSAL STUDIOS. Terms of Use · Privacy Policy .</div>
         </div>
     );
