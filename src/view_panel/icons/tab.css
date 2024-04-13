@@ -140,3 +140,14 @@ width: 100%;
 .button-text:hover {
   background-color: #0056b3; /* Darker shade of blue */
 }
+#tip{
+  position: absolute;
+  top: 85px;
+  padding-left: 920px;
+}
+#back{
+  position: absolute;
+  top: -120px;
+  left: 800px;
+  width: 150px;
+}

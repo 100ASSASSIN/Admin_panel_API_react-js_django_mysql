@@ -65,7 +65,7 @@ function ApiData() {
             <button id="ut2" type="submit" style={buttonStyle} onClick={() => navigate(-1)}>
                 Go Back
             </button>
-            <button onClick={() => remove(-1)} style={{ padding: '10px 90px', backgroundColor: 'red', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>- Remove Orders</button>
+           <div id="tip"> <button  onClick={() => remove(-1)} style={{ padding: '10px 90px', backgroundColor: 'red', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>- Remove Orders</button> </div>
         </div>
     );
 }
