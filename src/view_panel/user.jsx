@@ -7,7 +7,7 @@ const navigate = () => {
     window.location.replace("/assassin");
 }
 const remove = () => {
-    window.location.replace("/del");
+    window.location.replace("/users_del");
   };
 function ApiData() {
     const [data, setData] = useState([]);
