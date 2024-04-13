@@ -9,6 +9,7 @@ function UploadPage() {
     const [file, setFile] = useState(null);
     const [name, setName] = useState('');
     const [price, setPrice] = useState('');
+    const [id, setId] = useState(''); // Step 1: State for ID
 
     const handleFileChange = (event) => {
         setFile(event.target.files[0]);
@@ -22,6 +23,10 @@ function UploadPage() {
         setPrice(event.target.value);
     };
 
+    const handleIdChange = (event) => { // Step 2: Handler function for ID change
+        setId(event.target.value);
+    };
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -29,6 +34,7 @@ function UploadPage() {
         formData.append('name', name);
         formData.append('price', price);
         formData.append('file', file);
+        formData.append('id', id); // Step 4: Append ID to FormData
 
         // Add filename to form data
         if (file) {
@@ -53,6 +59,7 @@ function UploadPage() {
                         setName('');
                         setPrice('');
                         setFile(null);
+                        setId(''); // Reset ID field
                     } else {
                         return response.json().then(errorData => {
                             throw new Error(errorData.detail);
@@ -73,6 +80,17 @@ function UploadPage() {
             </button>
             <div id="Uploade" style={{ maxWidth: '400px', margin: 'auto', padding: '20px', border: '1px solid #ccc', borderRadius: '5px' }}>
             <form onSubmit={handleSubmit} className="upload-form">
+    <div className="form-group">
+        <label htmlFor="idInput" className="form-label">ID:</label>
+        <input
+            type="text"
+            id="idInput"
+            value={id} // Step 3: Bind value to ID state
+            onChange={handleIdChange} // Step 3: Handle change event
+            required // Step 5: Make input required if necessary
+            className="form-control"
+        />
+    </div>
     <div className="form-group">
         <label htmlFor="nameInput" className="form-label">Name:</label>
         <input
