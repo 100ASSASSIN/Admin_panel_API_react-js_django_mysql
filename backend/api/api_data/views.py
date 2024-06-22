@@ -29,7 +29,7 @@ def view_users(request):
             host="localhost",
             user="root",
             password="9047",
-            database="u967353045_root"
+            database="u967353045_root2"
         )
 
         # Create cursor
